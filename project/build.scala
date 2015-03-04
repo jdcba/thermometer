@@ -22,6 +22,7 @@ object build extends Build {
   lazy val standardSettings =
     Defaults.coreDefaultSettings ++
     uniformDependencySettings ++
+    strictDependencySettings ++
     uniform.docSettings("https://github.com/CommBank/thermometer") ++ Seq(
       parallelExecution in Test := false,
       updateOptions := updateOptions.value.withCachedResolution(true)
@@ -47,10 +48,12 @@ object build extends Build {
         ++ uniform.project("thermometer", "au.com.cba.omnia.thermometer")
         ++ Seq(
           libraryDependencies ++=
-            depend.scalding() ++ depend.hadoop() ++ depend.scalaz() ++ Seq(
-              "org.specs2"              %% "specs2"                      % depend.versions.specs,
+            depend.hadoopClasspath ++ depend.hadoop() ++ depend.scalding() ++ depend.scalaz() ++ Seq(
+              "org.scalaz"              %% "scalaz-scalacheck-binding"   % depend.versions.scalaz,
               "org.scalacheck"          %% "scalacheck"                  % depend.versions.scalacheck,
-              "org.scalaz"              %% "scalaz-scalacheck-binding"   % depend.versions.scalaz
+              "org.specs2"              %% "specs2"                      % depend.versions.specs
+                exclude("org.scalacheck", s"scalacheck_${scalaBinaryVersion.value}")
+                exclude("org.ow2.asm", "asm")
             )
         )
   )
@@ -62,7 +65,7 @@ object build extends Build {
       standardSettings
         ++ uniform.project("thermometer-hive", "au.com.cba.omnia.thermometer.hive")
         ++ Seq(
-          libraryDependencies ++= depend.hadoop() ++ depend.hive()
+          libraryDependencies ++= depend.hadoopClasspath ++ depend.hadoop() ++ depend.hive()
         )
   ).dependsOn(core)
 }
