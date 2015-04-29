@@ -12,12 +12,11 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-package au.com.cba.omnia.thermometer
-package tools
+package au.com.cba.omnia.thermometer.tools
 
-import java.io._
+import au.com.cba.omnia.thermometer.test.Spec
 
-class ErrorsSpec extends test.Spec { def is = s2"""
+class ErrorsSpec extends Spec { def is = s2"""
 
 Errors Properties
 =================

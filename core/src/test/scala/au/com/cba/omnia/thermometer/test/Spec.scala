@@ -12,16 +12,12 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-package au.com.cba.omnia.thermometer
-package test
+package au.com.cba.omnia.thermometer.test
 
-import com.twitter.scalding._
-
-import org.specs2._
-import org.specs2.matcher._
+import org.specs2.{Specification, ScalaCheck}
+import org.specs2.matcher.ThrownExpectations
 
 
 trait Spec extends Specification
-  with TerminationMatchers
   with ThrownExpectations
   with ScalaCheck

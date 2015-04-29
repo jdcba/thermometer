@@ -23,12 +23,12 @@ import org.apache.hadoop.hive.conf.HiveConf.ConfVars._
 import org.apache.hadoop.hive.metastore.{HiveMetaHookLoader, HiveMetaStoreClient, RetryingMetaStoreClient}
 import org.apache.hadoop.hive.metastore.api.Table
 
-import org.specs2.specification.BeforeExample
+import org.specs2.specification.BeforeEach
 
 import au.com.cba.omnia.thermometer.tools.HadoopSupport
 
 /** Adds testing support for Hive by creating a `HiveConf` with a temporary path.*/
-trait HiveSupport extends HadoopSupport with BeforeExample {
+trait HiveSupport extends HadoopSupport with BeforeEach {
   lazy val hiveDir: String       = s"/tmp/hadoop/${name}/hive"
   lazy val hiveDb: String        = s"$hiveDir/hive_db"
   lazy val hiveWarehouse: String = s"$hiveDir/warehouse"

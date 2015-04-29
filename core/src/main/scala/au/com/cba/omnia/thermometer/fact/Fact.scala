@@ -12,17 +12,15 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-package au.com.cba.omnia.thermometer
-package fact
-
-import au.com.cba.omnia.thermometer.context._
-
-import org.apache.hadoop.fs.Path
-import org.specs2._
-import org.specs2.execute._
-import org.specs2.matcher._
+package au.com.cba.omnia.thermometer.fact
 
 import scalaz._, Scalaz._
+
+import org.apache.hadoop.fs.Path
+
+import org.specs2.execute.{Result, AsResult}
+
+import au.com.cba.omnia.thermometer.context.Context
 
 case class Fact(run: Context => Result)
 

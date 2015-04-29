@@ -12,20 +12,20 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-package au.com.cba.omnia.thermometer
-package context
-
-import au.com.cba.omnia.thermometer.tools._
-import au.com.cba.omnia.thermometer.core.Thermometer._
-import org.apache.hadoop.conf.Configuration
-import org.apache.hadoop.fs.{FileSystem, Path, FileStatus}
-import org.specs2.execute._
-
-import java.io.{InputStreamReader, BufferedReader}
+package au.com.cba.omnia.thermometer.context
 
 import scala.util.control.NonFatal
 import scala.collection.JavaConverters
 
+import java.io.{InputStreamReader, BufferedReader}
+
+import org.specs2.execute._
+
+import org.apache.hadoop.conf.Configuration
+import org.apache.hadoop.fs.{FileSystem, Path, FileStatus}
+
+import au.com.cba.omnia.thermometer.core.Thermometer._
+import au.com.cba.omnia.thermometer.tools._
 
 /**
  * A `Context` is a HDFS wrapper that sacrifices all safety, composability
@@ -39,7 +39,7 @@ case class Context(config: Configuration) {
     catch {
       case NonFatal(t) =>
         val detail =
-          """This test is failing because an error has occurred trying to perform an HDFS operation.
+          s"""This test is failing because an error has occurred trying to perform an HDFS operation.
             |
             |This usually (but not always) indicates the scalding code has run to completion, but
             |there is an issue within the assertions being made.

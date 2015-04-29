@@ -48,13 +48,7 @@ object build extends Build {
         ++ uniform.project("thermometer", "au.com.cba.omnia.thermometer")
         ++ Seq(
           libraryDependencies ++=
-            depend.hadoopClasspath ++ depend.hadoop() ++ depend.scalding() ++ depend.scalaz() ++ Seq(
-              "org.scalaz"              %% "scalaz-scalacheck-binding"   % depend.versions.scalaz,
-              "org.scalacheck"          %% "scalacheck"                  % depend.versions.scalacheck,
-              "org.specs2"              %% "specs2"                      % depend.versions.specs
-                exclude("org.scalacheck", s"scalacheck_${scalaBinaryVersion.value}")
-                exclude("org.ow2.asm", "asm")
-            )
+            depend.hadoopClasspath ++ depend.hadoop() ++ depend.scalding() ++ depend.testing(configuration = "compile")
         )
   )
 

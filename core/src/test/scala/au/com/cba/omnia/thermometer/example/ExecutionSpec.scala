@@ -14,14 +14,14 @@
 
 package au.com.cba.omnia.thermometer.example
 
-
 import java.util.Date
 
 import scalaz.effect.IO
 
-import com.twitter.scalding._
+import com.twitter.scalding.{Execution, TypedPsv}
+import com.twitter.scalding.typed.IterablePipe
 
-import au.com.cba.omnia.thermometer.core._
+import au.com.cba.omnia.thermometer.core.{ThermometerSpec, ThermometerRecordReader}
 import au.com.cba.omnia.thermometer.core.Thermometer._
 import au.com.cba.omnia.thermometer.context.Context
 import au.com.cba.omnia.thermometer.fact.PathFactoids._
@@ -43,8 +43,8 @@ Demonstration of ThermometerSpec using Execution monad
     Car("Batmobile", 1966, purchaseDate)
   )
 
-  def execution: Execution[Unit] =
-    ThermometerSource[Car](data)
+  val execution: Execution[Unit] =
+    IterablePipe[Car](data)
       .map(c => (c.model, c.year, c.purchaseDate))
       .writeExecution(TypedPsv[(String, Int, String)]("cars"))
 
@@ -52,9 +52,9 @@ Demonstration of ThermometerSpec using Execution monad
     executesOk(execution)
 
     expectations(t => {
-      t.exists("cars" </> "_SUCCESS") must beTrue
+      t.exists("cars" </> "_SUCCESS")   must beTrue
       t.exists("cars" </> "part-00000") must beTrue
-      t.lines("cars" </> "part-*") must contain(allOf(data.map(_.toPSV):_*))
+      t.lines("cars" </> "part-*")      must contain(allOf(data.map(_.toPSV):_*))
     })
   }
 
@@ -76,8 +76,8 @@ Demonstration of ThermometerSpec using Execution monad
     })
   })
 
-  def execution2: Execution[(Unit, Unit)] = {
-    val pipe = ThermometerSource[Car](data).map(c =>  (c.model, c.year, c.purchaseDate))
+  val execution2: Execution[(Unit, Unit)] = {
+    val pipe = IterablePipe[Car](data).map(c =>  (c.model, c.year, c.purchaseDate))
     pipe.writeExecution(TypedPsv[(String, Int, String)]("output/cars/1"))
       .zip(pipe.writeExecution(TypedPsv[(String, Int, String)]("output/cars/2")))
   }

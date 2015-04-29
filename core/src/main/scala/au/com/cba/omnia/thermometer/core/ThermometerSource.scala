@@ -12,11 +12,9 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-package au.com.cba.omnia.thermometer
-package core
+package au.com.cba.omnia.thermometer.core
 
-import cascading.flow.FlowDef
-import com.twitter.scalding._
+import com.twitter.scalding.TypedPipe
 import com.twitter.scalding.typed.IterablePipe
 
 object ThermometerSource {

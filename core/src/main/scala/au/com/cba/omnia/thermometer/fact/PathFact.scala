@@ -14,7 +14,7 @@
 
 package au.com.cba.omnia.thermometer.fact
 
-import org.apache.hadoop.fs._
+import org.apache.hadoop.fs.{FileSystem, Path, RemoteIterator}
 
 import org.specs2.execute.Result
 import org.specs2.matcher.ThrownExpectations

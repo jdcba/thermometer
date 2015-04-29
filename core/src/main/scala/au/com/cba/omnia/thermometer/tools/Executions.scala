@@ -21,9 +21,7 @@ import scala.util.Try
 
 import java.util.concurrent.Executors
 
-import com.twitter.scalding._
-
-import scalaz._, Scalaz._
+import com.twitter.scalding.{Config, Execution, Mode}
 
 object Executions {
   /** Run the specified execution context, returns an optional error state (None indicates success). */
