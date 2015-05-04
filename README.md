@@ -33,10 +33,12 @@ getting started
 
 Import everything:
 
-```
+```scala
+import com.twitter.scalding._
+import com.twitter.scalding.typed.IterablePipe
+
 import au.com.cba.omnia.thermometer.core._, Thermometer._
 import au.com.cba.omnia.thermometer.fact.PathFactoids._
-import com.twitter.scalding._
 ```
 
 Then create a spec that extends `ThermometerSpec`. This sets up appropriate scalding,
@@ -49,21 +51,25 @@ thermometer facts
 
 Facts can be asserted on cascading `Pipe` objects or scalding `TypedPipe` objects.
 
-To verify some pipeline, you add a withFacts call. For example:
+To verify some pipeline, you add a facts call. For example:
 
-```
-  def pipeline =
-    ThermometerSource(List("hello", "world"))
+```scala
+def test {
+  val exec =
+    IterablePipe(List("hello", "world"))
       .map(c => (c, "really" + c + "!"))
-      .write(TypedPsv[(String, String)]("output"))
-      .withFacts(
-        "output" </> "_ERROR"      ==> missing
-      , "output" </> "_SUCCESS"    ==> exists
-      , "output" </> "part-00000"  ==> (exists, count(2))  /* 2 items */
-      )
+      .writeExecution(TypedPsv[(String, String)]("output"))
+
+  executesOk(exec)
+  facts(
+    "output" </> "_ERROR"      ==> missing
+  , "output" </> "_SUCCESS"    ==> exists
+  , "output" </> "part-00000"  ==> (exists, count(2))  /* 2 items */
+  )
+}
 ```
 
-Breaking this down, `withFacts` takes a sequence of `Fact`s, these
+Breaking this down, `facts` takes a sequence of `Fact`s, these
 can be construted in a number of ways, the most supported form are `PathFact`s,
 which are built using the `==>` operation added to hdfs `Path`s and `String`s.
 The right hand side of `==>` specifies a sequences of facts that should hold
@@ -77,97 +83,57 @@ Thermometer expectations allow you to fall back to specs2, this may be because
 of missing functionality from the facts api, or for optimisation of special
 cases.
 
-To verify some pipeline, you add a withExpectations call. For example:
+To verify some pipeline, you add a expectations call. For example:
 
-```
-  def pipeline =
-    ThermometerSource(List("hello", "world"))
+```scala
+def test = {
+  val exec =
+    IterablePipe(List("hello", "world"))
       .map(c => (c, "really" + c + "!"))
-      .write(TypedPsv[(String, String)]("output"))
-      .withExpectations(context => {
-         context.exists("output" </> "_SUCCESS") must beTrue
-         context.lines("output" </> "part-*").toSet must_== Set(
-           "hello" -> "really hello!",
-           "world" -> "really world!"
-         )
-      })
+      .writeExecution(TypedPsv[(String, String)]("output"))
 
+  executesOk(exec)
+  expectations { context =>
+    context.exists("output" </> "_SUCCESS") must beTrue
+    context.lines("output" </> "part-*").toSet must_== Set(
+      "hello" -> "really hello!",
+       "world" -> "really world!"
+    )
+  }
+}
 ```
 
-Breaking this down, `withExpectations` takes a function `Context => Unit`.
+Breaking this down, `expectations` takes a function `Context => Unit`.
 `Context` is a primitive (unsafe) API over hdfs operations that will allow you
 to make assertions. The `Context` handles unexpected failures by failing the
 test with a nice error message, but there is no way to do manual error handling
 at this point.
 
-
-thermometer source
-------------------
-
-A `ThermometerSource` is a thin wrapper around an in-memory scalding source
-that is specialized so that it can be immediately treated as a TypedPipe without
-corner cases (and better inference).
-
-Usage:
-
-```
-
-  def pipeline =
-    ThermometerSource(List("hello", "world"))            // : TypedPipe[String]
-      .map(c => (c, "really" + c + "!"))
-      .write(TypedPsv[(String, String)]("output"))
-
-```
-
 using thermometer from scalacheck properties
 --------------------------------------------
 
 The hackery that thermometer uses to handle the _mutable_, _global_, _implicit_ state that
-scalding uses (yes shake your head now). Needs to be reset for each run. To do this use an
-`isolate {} block inside the property`.
+HDFS uses (yes shake your head now) needs to be reset for each run. To do this use an
+`isolate {} block inside the property`. (https://github.com/CommBank/thermometer/issues/41)
 
 For example:
 
-```
-  def pipeline = prop((data: List[String]) => isolate {
-    ThermometerSource(data)
-      .map(c => (c, "really " + c + "!"))
-      .write(TypedPsv[(String, String)]("output"))
-      .withFacts(
-      , "output" </> "_SUCCESS"    ==> exists
-      )
-  })
+```scala
+def test = prop((data: List[String]) => isolate {
+    val exec =
+      IterablePipe(data)
+        .map(c => (c, "really " + c + "!"))
+        .writeExecution(TypedPsv[(String, String)]("output"))
 
-
+    executesOk(exec)
+    facts("output" </> "_SUCCESS"    ==> exists)
+})
 ```
 
 dependent pipelines
 -------------------
 
-It is often useful to use one spec as the input to another (for example, you want to
-write then read).
-
-To do this use `withDependency`.
-
-For example if you were testing TypedPsv/TypedCsv something like this would work:
-
-```
-  def write =
-    ThermometerSource(List("hello", "world"))
-      .write(TypedPsv[String]("output.psv"))
-      .withFacts(
-        "output.psv" </> "_SUCCESS"   ==> exists
-      )
-
-  def read = withDependency(write) {
-    TypedPsv[String]("output.psv")
-      .write(TypedCsv("output.csv"))
-      .withFacts(
-        "customers.csv" </> "_SUCCESS"   ==> exists
-      )
-  }
-
-```
+Use `flatMap` or `zip` from the Execution API to create dependencies.
 
 hive
 ----
@@ -189,9 +155,6 @@ ongoing work
  - Built-in support for more facts
    - Support for streaming comparisons
    - Support for statistical comparisons
-   - Support for testing in-memory pipes without going to disk
- - A ThermometerSink that would allow in memory fact checking
- - Support for running full jobs in the same fact framework
- - Support for re-running tests with different scalding modes
+  - Support for re-running tests with different scalding modes
  - Add the ability for Context to not depend on hdfs, via some
    sort of in memory representation for assertions.
