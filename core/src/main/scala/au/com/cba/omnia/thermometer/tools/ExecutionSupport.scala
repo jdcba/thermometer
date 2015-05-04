@@ -60,8 +60,12 @@ trait ExecutionSupport extends FieldConversions with HadoopSupport { self: Speci
   def executesOk(execution: Execution[_], args: Map[String, List[String]] = Map.empty): Result = {
     execute(execution, args) match {
       case Success(x) => SpecsSuccess()
-      case Failure(t) =>
-        throw FailureException(SpecsFailure(s"Execution failed: ${t.toString}", "", t.getStackTrace.toList))
+      case Failure(t) => {
+        val stackTrace = Errors.renderWithStack(t)
+        throw FailureException(SpecsFailure(
+          s"Execution failed: ${t.toString}\n$stackTrace", t.getMessage, t.getStackTrace.toList
+        ))
+      }
     }
   }
 
@@ -78,14 +82,27 @@ trait ExecutionSupport extends FieldConversions with HadoopSupport { self: Speci
     }
   }
 
+  /** Runs the provided pipe and returns [[Try]] with the iterable of the result. */
+  def run[T](pipe: TypedPipe[T]): Try[Iterable[T]] = execute(pipe.toIterableExecution)
 
-  /** Verifies the provided list of expections in the context of this test. */
-  def expectations(f: Context => Unit): Result = {
-    f(Context(jobConf))
-    success
-  }
+  /** Runs the provided [[Grouped]] and returns [[Try]] with the iterable of the result. */
+  def run[K, V](grouped: Grouped[K, V]): Try[Iterable[(K, V)]] =
+    execute(grouped.toTypedPipe.toIterableExecution)
+
+  /** Checks that the provided pipe runs successfully and returns an iterable of the content. */
+  def runsSuccessfully[T](pipe: TypedPipe[T]): Iterable[T] =
+    executesSuccessfully(pipe.toIterableExecution)
+
+  /** Checks that the provided [[Grouped]] runs successfully and returns an iterable of the content. */
+  def runsSuccessfully[K, V](grouped: Grouped[K, V]): Iterable[(K, V)] =
+    executesSuccessfully(grouped.toTypedPipe.toIterableExecution)
 
   /** Verifies the provided list of Facts in the context of this test. */
   def facts(facts: Fact*): Result =
     facts.toList.map(fact => fact.run(Context(jobConf))).suml(Result.ResultMonoid)
+
+  /** Verifies the provided list of expections in the context of this test. */
+  def expectations(f: Context => Result): Result = {
+    f(Context(jobConf))
+  }
 }

@@ -130,6 +130,23 @@ def test = prop((data: List[String]) => isolate {
 })
 ```
 
+testing scalding pipes directly
+-------------------------------
+
+Thermometer allows the testing of typed pipes directly.
+
+For example:
+
+```scala
+def test = {
+  val pipe =
+    IterablePipe(nums)
+      .map(_ + 1)
+
+  runsSuccessfully(pipe) must_== nums.map(_ + 1)
+}
+```
+
 dependent pipelines
 -------------------
 
