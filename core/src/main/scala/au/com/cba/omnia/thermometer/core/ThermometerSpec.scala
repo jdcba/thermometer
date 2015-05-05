@@ -30,7 +30,7 @@ import org.apache.hadoop.fs.{FileSystem, Path}
 import org.specs2._
 import org.specs2.execute.{Result, Failure, FailureException}
 import org.specs2.matcher.ThrownExpectations
-import org.specs2.specification.Fragments
+import org.specs2.specification.core.SpecStructure
 
 import au.com.cba.omnia.thermometer.context.Context
 import au.com.cba.omnia.thermometer.fact.Fact
@@ -43,8 +43,9 @@ abstract class ThermometerSpec extends Specification
     with ScalaCheck
     with ExecutionSupport {
 
-  override def map(fs: => Fragments) =
-    sequential ^ isolated ^ isolate(fs)
+  /** Ensures that each of the tests is run sequentially and isolated. */
+  override def map(struct: SpecStructure) =
+    sequential ^ isolated ^ isolate(struct)
 
   def isolate[A](thunk: => A): A = {
     FileSystem.closeAll()
