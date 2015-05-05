@@ -30,7 +30,6 @@ trait HadoopSupport {
 
   lazy val jobConf: JobConf = new JobConf <| (conf => {
     new java.io.File(dir, "data").mkdirs()
-    System.setProperty("user.dir", s"${dir}/user")
     conf.set("user.dir", s"${dir}/user")
     conf.set("jobclient.completion.poll.interval", "10")
     conf.set("cascading.flow.job.pollinginterval", "2")

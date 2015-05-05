@@ -30,6 +30,7 @@ import org.apache.hadoop.fs.{FileSystem, Path}
 import org.specs2._
 import org.specs2.execute.{Result, Failure, FailureException}
 import org.specs2.matcher.ThrownExpectations
+import org.specs2.specification.BeforeAfterEach
 import org.specs2.specification.core.SpecStructure
 
 import au.com.cba.omnia.thermometer.context.Context
@@ -40,18 +41,29 @@ import au.com.cba.omnia.thermometer.core.Thermometer._
 /** Adds functionality that makes testing scalding flows and jobs nicer.*/
 abstract class ThermometerSpec extends Specification
     with ThrownExpectations
+    with BeforeAfterEach
     with ScalaCheck
     with ExecutionSupport {
 
   /** Ensures that each of the tests is run sequentially and isolated. */
   override def map(struct: SpecStructure) =
-    sequential ^ isolated ^ isolate(struct)
+    sequential ^ isolated ^ struct
 
-  def isolate[A](thunk: => A): A = {
-    FileSystem.closeAll()
-    thunk
+  // Store the original user dir
+  private val userDir = System.getProperty("user.dir")
+
+  /** Sets the JVM user.dir to a temporary test location. */
+  def before = {
+    new File(dir, "user").mkdirs()
+    System.setProperty("user.dir", s"${dir}/user")
   }
-  
+
+  /** Resets the user dir and closes the HDFS file system. */
+  def after = {
+    System.setProperty("user.dir", userDir)
+    FileSystem.closeAll()
+  }
+
   /** Run the test with sourceEnv being on the local hadoop path of the test.*/
   def withEnvironment(sourceEnv: Path)(test: => Result): Result = {
     val (sourceDir, targetDir) = (new File(sourceEnv.toUri.getPath), new File((dir </> "user").toUri.getPath))
