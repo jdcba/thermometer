@@ -155,9 +155,8 @@ Use `flatMap` or `zip` from the Execution API to create dependencies.
 hive
 ----
 
-Mix in the `HiveSupport` trait in `import au.com.cba.omnia.thermometer.hive.HiveSupport` to add
-support for hive and, in particular, set up a separate warehouse directory and metadata database per
-test and provide the right `HiveConf`.
+Use `ThermometerHiveSpec` to mix in the `HiveSupport` trait and add support for hive and, in particular, set up a 
+separate warehouse directory and metadata database per test and provide the right `HiveConf`.
 
 log verbosity
 -------------

@@ -50,7 +50,7 @@ trait HiveSupport extends HadoopSupport with BeforeEach {
     * This prevents the Hive DB getting corrupted when the first Hive operations in the test
     * are executed concurrently.
     */
-  def before = {
+  def before: Unit = {
     try {
       val client = RetryingMetaStoreClient.getProxy(
         hiveConf,
@@ -71,5 +71,6 @@ trait HiveSupport extends HadoopSupport with BeforeEach {
       case NonFatal(t) => throw new Exception("Failed to create client for hive test setup", t)
     }
 
+    ()
   }
 }

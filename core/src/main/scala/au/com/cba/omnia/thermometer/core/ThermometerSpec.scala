@@ -38,7 +38,7 @@ import au.com.cba.omnia.thermometer.fact.Fact
 import au.com.cba.omnia.thermometer.tools.{Errors, ExecutionSupport}
 import au.com.cba.omnia.thermometer.core.Thermometer._
 
-/** Adds functionality that makes testing scalding flows and jobs nicer.*/
+/** Adds functionality that makes testing Scalding nicer.*/
 abstract class ThermometerSpec extends Specification
     with ThrownExpectations
     with BeforeAfterEach
@@ -53,13 +53,14 @@ abstract class ThermometerSpec extends Specification
   private val userDir = System.getProperty("user.dir")
 
   /** Sets the JVM user.dir to a temporary test location. */
-  def before = {
+  def before: Unit = {
     new File(dir, "user").mkdirs()
     System.setProperty("user.dir", s"${dir}/user")
+    ()
   }
 
   /** Resets the user dir and closes the HDFS file system. */
-  def after = {
+  def after: Unit = {
     System.setProperty("user.dir", userDir)
     FileSystem.closeAll()
   }
