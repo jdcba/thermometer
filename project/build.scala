@@ -25,7 +25,8 @@ object build extends Build {
     strictDependencySettings ++
     uniform.docSettings("https://github.com/CommBank/thermometer") ++ Seq(
       parallelExecution in Test := false,
-      updateOptions := updateOptions.value.withCachedResolution(true)
+      updateOptions := updateOptions.value.withCachedResolution(true),
+      fork in Test := true
     )
 
   lazy val all = Project(
