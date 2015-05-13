@@ -34,6 +34,7 @@ object build extends Build {
     base = file("."),
     settings =
       standardSettings
+        ++ uniform.project("thermometer-all", "au.com.cba.omnia.thermometer.all")
         ++ uniform.ghsettings
         ++ Seq(
           publishArtifact := false
