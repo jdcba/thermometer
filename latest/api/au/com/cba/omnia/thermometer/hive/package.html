@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html >
 <html>
         <head>
           <title>hive - au.com.cba.omnia.thermometer.hive</title>
@@ -9,6 +8,11 @@
           
       <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/tools.tooltip.js"></script>
+      
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../../../index.html';
@@ -26,7 +30,11 @@
       <div id="definition">
         <img src="../../../../../../lib/package_big.png" />
         <p id="owner"><a href="../../../../../package.html" class="extype" name="au">au</a>.<a href="../../../../package.html" class="extype" name="au.com">com</a>.<a href="../../../package.html" class="extype" name="au.com.cba">cba</a>.<a href="../../package.html" class="extype" name="au.com.cba.omnia">omnia</a>.<a href="../package.html" class="extype" name="au.com.cba.omnia.thermometer">thermometer</a></p>
-        <h1>hive</h1>
+        <h1>hive</h1><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.hive.package" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       </div>
 
       <h4 id="signature" class="signature">
@@ -59,7 +67,7 @@
         <div id="types" class="types members">
               <h3>Type Members</h3>
               <ol><li name="au.com.cba.omnia.thermometer.hive.HiveSupport" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="HiveSupportextendsHadoopSupportwithBeforeExample"></a>
+      <a id="HiveSupportextendsHadoopSupportwithBeforeEach"></a>
       <a id="HiveSupport:HiveSupport"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -67,10 +75,33 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="HiveSupport.html"><span class="name">HiveSupport</span></a><span class="result"> extends <a href="../tools/HadoopSupport.html" class="extype" name="au.com.cba.omnia.thermometer.tools.HadoopSupport">HadoopSupport</a> with <span class="extype" name="org.specs2.specification.BeforeExample">BeforeExample</span></span>
+        <a href="HiveSupport.html"><span class="name">HiveSupport</span></a><span class="result"> extends <a href="../tools/HadoopSupport.html" class="extype" name="au.com.cba.omnia.thermometer.tools.HadoopSupport">HadoopSupport</a> with <span class="extype" name="org.specs2.specification.BeforeEach">BeforeEach</span></span>
       </span>
-      </h4>
-      <p class="comment cmt">Adds testing support for Hive by creating a <code>HiveConf</code> with a temporary path.</p>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.hive.package@HiveSupportextendsHadoopSupportwithBeforeEach" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Adds testing support for Hive by creating a <code>HiveConf</code> with a temporary path.</p>
+    </li><li name="au.com.cba.omnia.thermometer.hive.ThermometerHiveSpec" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ThermometerHiveSpecextendsThermometerSpecwithHiveSupport"></a>
+      <a id="ThermometerHiveSpec:ThermometerHiveSpec"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ThermometerHiveSpec.html"><span class="name">ThermometerHiveSpec</span></a><span class="result"> extends <a href="../core/ThermometerSpec.html" class="extype" name="au.com.cba.omnia.thermometer.core.ThermometerSpec">ThermometerSpec</a> with <a href="HiveSupport.html" class="extype" name="au.com.cba.omnia.thermometer.hive.HiveSupport">HiveSupport</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.hive.package@ThermometerHiveSpecextendsThermometerSpecwithHiveSupport" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Adds functionality that makes testing Scalding and Hive nicer.</p><div class="fullcomment"><div class="comment cmt"><p>Adds functionality that makes testing Scalding and Hive nicer.</p><p>This combines <span class="extype" name="ThermometerSpec">ThermometerSpec</span> and <a href="HiveSupport.html" class="extype" name="au.com.cba.omnia.thermometer.hive.HiveSupport">HiveSupport</a> and resolves the conflicting inheritance
+of <code>before</code>.
+</p></div></div>
     </li></ol>
             </div>
 
@@ -89,7 +120,11 @@
       <span class="symbol">
         <a href="VersionInfo$.html"><span class="name">VersionInfo</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.hive.package@VersionInfo" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li></ol>
             </div>
@@ -116,6 +151,7 @@
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../../../lib/template.js"></script>
+
+
     </body>
       </html>

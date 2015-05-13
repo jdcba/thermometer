@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html >
 <html>
         <head>
           <title>tools - au.com.cba.omnia.thermometer.tools</title>
@@ -9,6 +8,11 @@
           
       <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/tools.tooltip.js"></script>
+      
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../../../index.html';
@@ -26,7 +30,11 @@
       <div id="definition">
         <img src="../../../../../../lib/package_big.png" />
         <p id="owner"><a href="../../../../../package.html" class="extype" name="au">au</a>.<a href="../../../../package.html" class="extype" name="au.com">com</a>.<a href="../../../package.html" class="extype" name="au.com.cba">cba</a>.<a href="../../package.html" class="extype" name="au.com.cba.omnia">omnia</a>.<a href="../package.html" class="extype" name="au.com.cba.omnia.thermometer">thermometer</a></p>
-        <h1>tools</h1>
+        <h1>tools</h1><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.package" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       </div>
 
       <h4 id="signature" class="signature">
@@ -69,8 +77,12 @@
       <span class="symbol">
         <a href="ExecutionSupport.html"><span class="name">ExecutionSupport</span></a><span class="result"> extends <span class="extype" name="com.twitter.scalding.FieldConversions">FieldConversions</span> with <a href="HadoopSupport.html" class="extype" name="au.com.cba.omnia.thermometer.tools.HadoopSupport">HadoopSupport</a></span>
       </span>
-      </h4>
-      <p class="comment cmt">Adds testing support for scalding execution monad by setting up a test <code>Config</code> and <code>Mode</code>.</p>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.package@ExecutionSupportextendsFieldConversionswithHadoopSupport" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Adds testing support for scalding execution monad by setting up a test <code>Config</code> and <code>Mode</code>.</p>
     </li><li name="au.com.cba.omnia.thermometer.tools.HadoopSupport" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="HadoopSupportextendsAnyRef"></a>
       <a id="HadoopSupport:HadoopSupport"></a>
@@ -80,23 +92,14 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="HadoopSupport.html"><span class="name">HadoopSupport</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+        <a href="HadoopSupport.html"><span class="name">HadoopSupport</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
       </span>
-      </h4>
-      <p class="comment cmt">Adds testing support for Hadoop by creating a <code>JobConf</code> with a temporary path.</p>
-    </li><li name="au.com.cba.omnia.thermometer.tools.ScaldingSupport" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="ScaldingSupportextendsFieldConversionswithHadoopSupport"></a>
-      <a id="ScaldingSupport:ScaldingSupport"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="ScaldingSupport.html"><span class="name">ScaldingSupport</span></a><span class="result"> extends <span class="extype" name="com.twitter.scalding.FieldConversions">FieldConversions</span> with <a href="HadoopSupport.html" class="extype" name="au.com.cba.omnia.thermometer.tools.HadoopSupport">HadoopSupport</a></span>
-      </span>
-      </h4>
-      <p class="comment cmt">Adds testing support for scalding by setting up a test <code>FlowDef</code> and <code>Mode</code>.</p>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.package@HadoopSupportextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Adds testing support for Hadoop by creating a <code>JobConf</code> with a temporary path.</p>
     </li></ol>
             </div>
 
@@ -115,7 +118,11 @@
       <span class="symbol">
         <a href="Errors$.html"><span class="name">Errors</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.package@Errors" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="au.com.cba.omnia.thermometer.tools.Executions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Executions"></a>
@@ -128,33 +135,11 @@
       <span class="symbol">
         <a href="Executions$.html"><span class="name">Executions</span></a>
       </span>
-      </h4>
-      
-    </li><li name="au.com.cba.omnia.thermometer.tools.Flows" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Flows"></a>
-      <a id="Flows:Flows"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="Flows$.html"><span class="name">Flows</span></a>
-      </span>
-      </h4>
-      
-    </li><li name="au.com.cba.omnia.thermometer.tools.Jobs" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Jobs"></a>
-      <a id="Jobs:Jobs"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="Jobs$.html"><span class="name">Jobs</span></a>
-      </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.package@Executions" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="au.com.cba.omnia.thermometer.tools.Streams" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Streams"></a>
@@ -167,7 +152,11 @@
       <span class="symbol">
         <a href="Streams$.html"><span class="name">Streams</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.package@Streams" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li></ol>
             </div>
@@ -194,6 +183,7 @@
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../../../lib/template.js"></script>
+
+
     </body>
       </html>

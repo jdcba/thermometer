@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html >
 <html>
         <head>
           <title>ExecutionSupport - au.com.cba.omnia.thermometer.tools.ExecutionSupport</title>
@@ -9,6 +8,11 @@
           
       <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/tools.tooltip.js"></script>
+      
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../../../index.html';
@@ -26,7 +30,13 @@
       <div id="definition">
         <img src="../../../../../../lib/trait_big.png" />
         <p id="owner"><a href="../../../../../package.html" class="extype" name="au">au</a>.<a href="../../../../package.html" class="extype" name="au.com">com</a>.<a href="../../../package.html" class="extype" name="au.com.cba">cba</a>.<a href="../../package.html" class="extype" name="au.com.cba.omnia">omnia</a>.<a href="../package.html" class="extype" name="au.com.cba.omnia.thermometer">thermometer</a>.<a href="package.html" class="extype" name="au.com.cba.omnia.thermometer.tools">tools</a></p>
-        <h1>ExecutionSupport</h1>
+        <h1>ExecutionSupport</h1><h3><span class="morelinks"><div>Related Doc:
+            <a href="package.html" class="extype" name="au.com.cba.omnia.thermometer.tools">package tools</a>
+          </div></span></h3><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       </div>
 
       <h4 id="signature" class="signature">
@@ -39,13 +49,13 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Adds testing support for scalding execution monad by setting up a test <code>Config</code> and <code>Mode</code>.</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport">ExecutionSupport</a> with <span class="extype" name="org.specs2.Specification">Specification</span></dd><dt>Source</dt><dd><a href="https://github.com/CommBank/thermometer/tree/cbeb5fa9dcf8cba0fa748edeedb3cf93c32ec6c9//core/src/main/scala/au/com/cba/omnia/thermometer/tools/ExecutionSupport.scala" target="_blank">ExecutionSupport.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Adds testing support for scalding execution monad by setting up a test <code>Config</code> and <code>Mode</code>.</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport">ExecutionSupport</a> with <span class="extype" name="org.specs2.Specification">Specification</span></dd><dt>Source</dt><dd><a href="https://github.com/CommBank/thermometer/tree/Dirty(a6bcf7fe3685676f68923e42aa751d25a2c1e912)//core/src/main/scala/au/com/cba/omnia/thermometer/tools/ExecutionSupport.scala" target="_blank">ExecutionSupport.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="HadoopSupport.html" class="extype" name="au.com.cba.omnia.thermometer.tools.HadoopSupport">HadoopSupport</a>, <span class="extype" name="com.twitter.scalding.FieldConversions">FieldConversions</span>, <span class="extype" name="com.twitter.scalding.LowPriorityFieldConversions">LowPriorityFieldConversions</span>, <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="HadoopSupport.html" class="extype" name="au.com.cba.omnia.thermometer.tools.HadoopSupport">HadoopSupport</a>, <span class="extype" name="com.twitter.scalding.FieldConversions">FieldConversions</span>, <span class="extype" name="com.twitter.scalding.LowPriorityFieldConversions">LowPriorityFieldConversions</span>, <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div><div class="toggleContainer block">
-          <span class="toggle">Known Subclasses</span>
-          <div class="subClasses hiddenContent"><a href="../core/ThermometerSpec.html" class="extype" name="au.com.cba.omnia.thermometer.core.ThermometerSpec">ThermometerSpec</a></div>
-        </div></div>
+            <span class="toggle">Known Subclasses</span>
+            <div class="subClasses hiddenContent"><a href="../hive/ThermometerHiveSpec.html" class="extype" name="au.com.cba.omnia.thermometer.hive.ThermometerHiveSpec">ThermometerHiveSpec</a>, <a href="../core/ThermometerSpec.html" class="extype" name="au.com.cba.omnia.thermometer.core.ThermometerSpec">ThermometerSpec</a></div>
+          </div></div>
         
 
       <div id="mbrsel">
@@ -89,19 +99,6 @@
         <div id="values" class="values members">
               <h3>Value Members</h3>
               <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="!=(x$1:AnyRef):Boolean"></a>
-      <a id="!=(AnyRef):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a>
       <a id="!=(Any):Boolean"></a>
       <h4 class="signature">
@@ -110,10 +107,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <a id="##():Int"></a>
@@ -123,24 +124,15 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@##():Int" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="==(x$1:AnyRef):Boolean"></a>
-      <a id="==(AnyRef):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a>
       <a id="==(Any):Boolean"></a>
       <h4 class="signature">
@@ -149,10 +141,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="com.twitter.scalding.LowPriorityFieldConversions#anyToFieldArg" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="anyToFieldArg(f:Any):Comparable[_]"></a>
       <a id="anyToFieldArg(Any):Comparable[_]"></a>
@@ -162,9 +158,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">anyToFieldArg</span><span class="params">(<span name="f">f: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <span class="extype" name="java.lang.Comparable">Comparable</span>[_]</span>
+        <span class="name">anyToFieldArg</span><span class="params">(<span name="f">f: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <span class="extype" name="java.lang.Comparable">Comparable</span>[_]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@anyToFieldArg(f:Any):Comparable[_]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>LowPriorityFieldConversions</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
@@ -177,7 +177,11 @@
       <span class="symbol">
         <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="com.twitter.scalding.FieldConversions#asList" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asList(f:cascading.tuple.Fields):List[Comparable[_]]"></a>
@@ -190,7 +194,11 @@
       <span class="symbol">
         <span class="name">asList</span><span class="params">(<span name="f">f: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="java.lang.Comparable">Comparable</span>[_]]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@asList(f:cascading.tuple.Fields):List[Comparable[_]]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="com.twitter.scalding.FieldConversions#asSet" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asSet(f:cascading.tuple.Fields):Set[Comparable[_]]"></a>
@@ -203,7 +211,11 @@
       <span class="symbol">
         <span class="name">asSet</span><span class="params">(<span name="f">f: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="java.lang.Comparable">Comparable</span>[_]]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@asSet(f:cascading.tuple.Fields):Set[Comparable[_]]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
@@ -214,9 +226,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@clone():Object" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -235,7 +251,11 @@
       <span class="symbol">
         <span class="name">defaultMode</span><span class="params">(<span name="fromFields">fromFields: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>, <span name="toFields">toFields: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@defaultMode(fromFields:cascading.tuple.Fields,toFields:cascading.tuple.Fields):cascading.tuple.Fields" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="au.com.cba.omnia.thermometer.tools.HadoopSupport#dir" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="dir:String"></a>
@@ -248,7 +268,11 @@
       <span class="symbol">
         <span class="name">dir</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@dir:String" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="HadoopSupport.html" class="extype" name="au.com.cba.omnia.thermometer.tools.HadoopSupport">HadoopSupport</a></dd></dl></div>
     </li><li name="com.twitter.scalding.FieldConversions#ensureUniqueFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ensureUniqueFields(left:cascading.tuple.Fields,right:cascading.tuple.Fields,rightPipe:cascading.pipe.Pipe):(cascading.tuple.Fields,cascading.pipe.Pipe)"></a>
@@ -261,7 +285,11 @@
       <span class="symbol">
         <span class="name">ensureUniqueFields</span><span class="params">(<span name="left">left: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>, <span name="right">right: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>, <span name="rightPipe">rightPipe: <span class="extype" name="cascading.pipe.Pipe">Pipe</span></span>)</span><span class="result">: (<span class="extype" name="cascading.tuple.Fields">Fields</span>, <span class="extype" name="cascading.pipe.Pipe">Pipe</span>)</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@ensureUniqueFields(left:cascading.tuple.Fields,right:cascading.tuple.Fields,rightPipe:cascading.pipe.Pipe):(cascading.tuple.Fields,cascading.pipe.Pipe)" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="com.twitter.scalding.FieldConversions#enumValueToFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="enumValueToFields(x:Enumeration#Value):cascading.tuple.Fields"></a>
@@ -274,7 +302,11 @@
       <span class="symbol">
         <span class="name">enumValueToFields</span><span class="params">(<span name="x">x: <span class="extype" name="scala.Enumeration.Value">Value</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@enumValueToFields(x:Enumeration#Value):cascading.tuple.Fields" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
@@ -285,9 +317,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="equals(x$1:Any):Boolean"></a>
@@ -298,9 +334,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="au.com.cba.omnia.thermometer.tools.ExecutionSupport#execute" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="execute[T](execution:com.twitter.scalding.Execution[T],args:Map[String,List[String]]):scala.util.Try[T]"></a>
@@ -311,9 +351,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">execute</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="execution">execution: <span class="extype" name="com.twitter.scalding.Execution">Execution</span>[<span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.execute.T">T</span>]</span>, <span name="args">args: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]] = <span class="symbol">Map.empty</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.util.Try" class="extype" target="_top">Try</a>[<span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.execute.T">T</span>]</span>
+        <span class="name">execute</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="execution">execution: <span class="extype" name="com.twitter.scalding.Execution">Execution</span>[<span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.execute.T">T</span>]</span>, <span name="args">args: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]] = <span class="symbol">Map.empty</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.util.Try" class="extype" target="_top">Try</a>[<span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.execute.T">T</span>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@execute[T](execution:com.twitter.scalding.Execution[T],args:Map[String,List[String]]):scala.util.Try[T]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <p class="shortcomment cmt">Executes the provided execution with an optional map of arguments.</p>
     </li><li name="au.com.cba.omnia.thermometer.tools.ExecutionSupport#executesOk" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="executesOk(execution:com.twitter.scalding.Execution[_],args:Map[String,List[String]]):org.specs2.execute.Result"></a>
@@ -326,7 +370,11 @@
       <span class="symbol">
         <span class="name">executesOk</span><span class="params">(<span name="execution">execution: <span class="extype" name="com.twitter.scalding.Execution">Execution</span>[_]</span>, <span name="args">args: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]] = <span class="symbol">Map.empty</span></span>)</span><span class="result">: <span class="extype" name="org.specs2.execute.Result">Result</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@executesOk(execution:com.twitter.scalding.Execution[_],args:Map[String,List[String]]):org.specs2.execute.Result" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <p class="shortcomment cmt">Checks that the provided execution executed successfully.</p><div class="fullcomment"><div class="comment cmt"><p>Checks that the provided execution executed successfully.</p><p>It ignores the result of the execution.
 Takes an optional map of arguments.
 </p></div></div>
@@ -341,21 +389,29 @@ Takes an optional map of arguments.
       <span class="symbol">
         <span class="name">executesSuccessfully</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="execution">execution: <span class="extype" name="com.twitter.scalding.Execution">Execution</span>[<span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.executesSuccessfully.T">T</span>]</span>, <span name="args">args: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]] = <span class="symbol">Map.empty</span></span>)</span><span class="result">: <span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.executesSuccessfully.T">T</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@executesSuccessfully[T](execution:com.twitter.scalding.Execution[T],args:Map[String,List[String]]):T" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <p class="shortcomment cmt">Checks that the provided execution executed successfully and returns the result</p><div class="fullcomment"><div class="comment cmt"><p>Checks that the provided execution executed successfully and returns the result</p><p>Takes an optional map of arguments.
 </p></div></div>
     </li><li name="au.com.cba.omnia.thermometer.tools.ExecutionSupport#expectations" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="expectations(f:au.com.cba.omnia.thermometer.context.Context=&gt;Unit):org.specs2.execute.Result"></a>
-      <a id="expectations((Context)⇒Unit):Result"></a>
+      <a id="expectations(f:au.com.cba.omnia.thermometer.context.Context=&gt;org.specs2.execute.Result):org.specs2.execute.Result"></a>
+      <a id="expectations((Context)⇒Result):Result"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">expectations</span><span class="params">(<span name="f">f: (<a href="../context/Context.html" class="extype" name="au.com.cba.omnia.thermometer.context.Context">Context</a>) ⇒ <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>)</span><span class="result">: <span class="extype" name="org.specs2.execute.Result">Result</span></span>
+        <span class="name">expectations</span><span class="params">(<span name="f">f: (<a href="../context/Context.html" class="extype" name="au.com.cba.omnia.thermometer.context.Context">Context</a>) ⇒ <span class="extype" name="org.specs2.execute.Result">Result</span></span>)</span><span class="result">: <span class="extype" name="org.specs2.execute.Result">Result</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@expectations(f:au.com.cba.omnia.thermometer.context.Context=&gt;org.specs2.execute.Result):org.specs2.execute.Result" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <p class="shortcomment cmt">Verifies the provided list of expections in the context of this test.</p>
     </li><li name="au.com.cba.omnia.thermometer.tools.ExecutionSupport#facts" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="facts(facts:au.com.cba.omnia.thermometer.fact.Fact*):org.specs2.execute.Result"></a>
@@ -368,7 +424,11 @@ Takes an optional map of arguments.
       <span class="symbol">
         <span class="name">facts</span><span class="params">(<span name="facts">facts: <a href="../fact/Fact.html" class="extype" name="au.com.cba.omnia.thermometer.fact.Fact">Fact</a>*</span>)</span><span class="result">: <span class="extype" name="org.specs2.execute.Result">Result</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@facts(facts:au.com.cba.omnia.thermometer.fact.Fact*):org.specs2.execute.Result" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <p class="shortcomment cmt">Verifies the provided list of Facts in the context of this test.</p>
     </li><li name="com.twitter.scalding.FieldConversions#fieldFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="fieldFields[T&lt;:TraversableOnce[com.twitter.scalding.Field[_]]](f:T):com.twitter.scalding.RichFields"></a>
@@ -381,7 +441,11 @@ Takes an optional map of arguments.
       <span class="symbol">
         <span class="name">fieldFields</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="scala.TraversableOnce">TraversableOnce</span>[<span class="extype" name="com.twitter.scalding.Field">Field</span>[_]]</span>]</span><span class="params">(<span name="f">f: <span class="extype" name="com.twitter.scalding.FieldConversions.fieldFields.T">T</span></span>)</span><span class="result">: <span class="extype" name="com.twitter.scalding.RichFields">RichFields</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@fieldFields[T&lt;:TraversableOnce[com.twitter.scalding.Field[_]]](f:T):com.twitter.scalding.RichFields" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="com.twitter.scalding.FieldConversions#fieldToFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="fieldToFields(f:com.twitter.scalding.Field[_]):com.twitter.scalding.RichFields"></a>
@@ -394,7 +458,11 @@ Takes an optional map of arguments.
       <span class="symbol">
         <span class="name">fieldToFields</span><span class="params">(<span name="f">f: <span class="extype" name="com.twitter.scalding.Field">Field</span>[_]</span>)</span><span class="result">: <span class="extype" name="com.twitter.scalding.RichFields">RichFields</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@fieldToFields(f:com.twitter.scalding.Field[_]):com.twitter.scalding.RichFields" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="com.twitter.scalding.FieldConversions#fields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="fields[T&lt;:TraversableOnce[Symbol]](f:T):cascading.tuple.Fields"></a>
@@ -405,9 +473,13 @@ Takes an optional map of arguments.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fields</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="scala.TraversableOnce">TraversableOnce</span>[<a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Symbol" class="extype" target="_top">Symbol</a>]</span>]</span><span class="params">(<span name="f">f: <span class="extype" name="com.twitter.scalding.FieldConversions.fields.T">T</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
+        <span class="name">fields</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="scala.TraversableOnce">TraversableOnce</span>[<span class="extype" name="scala.Symbol">Symbol</span>]</span>]</span><span class="params">(<span name="f">f: <span class="extype" name="com.twitter.scalding.FieldConversions.fields.T">T</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@fields[T&lt;:TraversableOnce[Symbol]](f:T):cascading.tuple.Fields" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="com.twitter.scalding.FieldConversions#fieldsToRichFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="fieldsToRichFields(fields:cascading.tuple.Fields):com.twitter.scalding.RichFields"></a>
@@ -420,7 +492,11 @@ Takes an optional map of arguments.
       <span class="symbol">
         <span class="name">fieldsToRichFields</span><span class="params">(<span name="fields">fields: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="result">: <span class="extype" name="com.twitter.scalding.RichFields">RichFields</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@fieldsToRichFields(fields:cascading.tuple.Fields):com.twitter.scalding.RichFields" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
@@ -431,9 +507,13 @@ Takes an optional map of arguments.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -450,9 +530,13 @@ Takes an optional map of arguments.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fromEnum</span><span class="tparams">[<span name="T">T &lt;: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Enumeration" class="extype" target="_top">Enumeration</a></span>]</span><span class="params">(<span name="enumeration">enumeration: <span class="extype" name="com.twitter.scalding.FieldConversions.fromEnum.T">T</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
+        <span class="name">fromEnum</span><span class="tparams">[<span name="T">T &lt;: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Enumeration" class="extype" target="_top">Enumeration</a></span>]</span><span class="params">(<span name="enumeration">enumeration: <span class="extype" name="com.twitter.scalding.FieldConversions.fromEnum.T">T</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@fromEnum[T&lt;:Enumeration](enumeration:T):cascading.tuple.Fields" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
@@ -465,7 +549,11 @@ Takes an optional map of arguments.
       <span class="symbol">
         <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="com.twitter.scalding.FieldConversions#getField" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getField(f:cascading.tuple.Fields,idx:Int):cascading.tuple.Fields"></a>
@@ -476,9 +564,13 @@ Takes an optional map of arguments.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getField</span><span class="params">(<span name="f">f: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>, <span name="idx">idx: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
+        <span class="name">getField</span><span class="params">(<span name="f">f: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>, <span name="idx">idx: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@getField(f:cascading.tuple.Fields,idx:Int):cascading.tuple.Fields" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="com.twitter.scalding.FieldConversions#hasInts" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hasInts(f:cascading.tuple.Fields):Boolean"></a>
@@ -489,9 +581,13 @@ Takes an optional map of arguments.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hasInts</span><span class="params">(<span name="f">f: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">hasInts</span><span class="params">(<span name="f">f: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@hasInts(f:cascading.tuple.Fields):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
@@ -502,9 +598,13 @@ Takes an optional map of arguments.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="com.twitter.scalding.FieldConversions#intFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="intFields[T&lt;:TraversableOnce[Int]](f:T):cascading.tuple.Fields"></a>
@@ -515,9 +615,13 @@ Takes an optional map of arguments.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">intFields</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="scala.TraversableOnce">TraversableOnce</span>[<a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Int" class="extype" target="_top">Int</a>]</span>]</span><span class="params">(<span name="f">f: <span class="extype" name="com.twitter.scalding.FieldConversions.intFields.T">T</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
+        <span class="name">intFields</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="scala.TraversableOnce">TraversableOnce</span>[<a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Int" class="extype" target="_top">Int</a>]</span>]</span><span class="params">(<span name="f">f: <span class="extype" name="com.twitter.scalding.FieldConversions.intFields.T">T</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@intFields[T&lt;:TraversableOnce[Int]](f:T):cascading.tuple.Fields" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="com.twitter.scalding.FieldConversions#intToFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="intToFields(x:Int):cascading.tuple.Fields"></a>
@@ -528,9 +632,13 @@ Takes an optional map of arguments.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">intToFields</span><span class="params">(<span name="x">x: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
+        <span class="name">intToFields</span><span class="params">(<span name="x">x: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@intToFields(x:Int):cascading.tuple.Fields" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="com.twitter.scalding.FieldConversions#integerToFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="integerToFields(x:Integer):cascading.tuple.Fields"></a>
@@ -543,7 +651,11 @@ Takes an optional map of arguments.
       <span class="symbol">
         <span class="name">integerToFields</span><span class="params">(<span name="x">x: <span class="extype" name="java.lang.Integer">Integer</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@integerToFields(x:Integer):cascading.tuple.Fields" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -554,9 +666,13 @@ Takes an optional map of arguments.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="au.com.cba.omnia.thermometer.tools.HadoopSupport#jobConf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="jobConf:org.apache.hadoop.mapred.JobConf"></a>
@@ -569,7 +685,11 @@ Takes an optional map of arguments.
       <span class="symbol">
         <span class="name">jobConf</span><span class="result">: <span class="extype" name="org.apache.hadoop.mapred.JobConf">JobConf</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@jobConf:org.apache.hadoop.mapred.JobConf" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="HadoopSupport.html" class="extype" name="au.com.cba.omnia.thermometer.tools.HadoopSupport">HadoopSupport</a></dd></dl></div>
     </li><li name="au.com.cba.omnia.thermometer.tools.HadoopSupport#name" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="name:String"></a>
@@ -582,7 +702,11 @@ Takes an optional map of arguments.
       <span class="symbol">
         <span class="name">name</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@name:String" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="HadoopSupport.html" class="extype" name="au.com.cba.omnia.thermometer.tools.HadoopSupport">HadoopSupport</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
@@ -593,9 +717,13 @@ Takes an optional map of arguments.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="com.twitter.scalding.FieldConversions#newSymbol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="newSymbol(avoid:Set[Symbol],guess:Symbol,trial:Int):Symbol"></a>
@@ -606,9 +734,13 @@ Takes an optional map of arguments.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">newSymbol</span><span class="params">(<span name="avoid">avoid: <span class="extype" name="scala.Predef.Set">Set</span>[<a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Symbol" class="extype" target="_top">Symbol</a>]</span>, <span name="guess">guess: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Symbol" class="extype" target="_top">Symbol</a></span>, <span name="trial">trial: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Symbol" class="extype" target="_top">Symbol</a></span>
+        <span class="name">newSymbol</span><span class="params">(<span name="avoid">avoid: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Symbol">Symbol</span>]</span>, <span name="guess">guess: <span class="extype" name="scala.Symbol">Symbol</span></span>, <span name="trial">trial: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <span class="extype" name="scala.Symbol">Symbol</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@newSymbol(avoid:Set[Symbol],guess:Symbol,trial:Int):Symbol" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd><dt>Annotations</dt><dd>
                 <span class="name">@tailrec</span><span class="args">()</span>
               
@@ -622,9 +754,13 @@ Takes an optional map of arguments.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@notify():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
@@ -635,9 +771,13 @@ Takes an optional map of arguments.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="com.twitter.scalding.FieldConversions#parseAnySeqToFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="parseAnySeqToFields[T&lt;:TraversableOnce[Any]](anyf:T):cascading.tuple.Fields"></a>
@@ -648,9 +788,13 @@ Takes an optional map of arguments.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">parseAnySeqToFields</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="scala.TraversableOnce">TraversableOnce</span>[<a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>]</span><span class="params">(<span name="anyf">anyf: <span class="extype" name="com.twitter.scalding.FieldConversions.parseAnySeqToFields.T">T</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
+        <span class="name">parseAnySeqToFields</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="scala.TraversableOnce">TraversableOnce</span>[<a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>]</span><span class="params">(<span name="anyf">anyf: <span class="extype" name="com.twitter.scalding.FieldConversions.parseAnySeqToFields.T">T</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@parseAnySeqToFields[T&lt;:TraversableOnce[Any]](anyf:T):cascading.tuple.Fields" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="com.twitter.scalding.LowPriorityFieldConversions#productToFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="productToFields(f:Product):cascading.tuple.Fields"></a>
@@ -661,10 +805,82 @@ Takes an optional map of arguments.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">productToFields</span><span class="params">(<span name="f">f: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Product" class="extype" target="_top">Product</a></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
+        <span class="name">productToFields</span><span class="params">(<span name="f">f: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Product" class="extype" target="_top">Product</a></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@productToFields(f:Product):cascading.tuple.Fields" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>LowPriorityFieldConversions</dd></dl></div>
+    </li><li name="au.com.cba.omnia.thermometer.tools.ExecutionSupport#run" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="run[K,V](grouped:com.twitter.scalding.Grouped[K,V]):scala.util.Try[Iterable[(K,V)]]"></a>
+      <a id="run[K,V](Grouped[K,V]):Try[Iterable[(K,V)]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">run</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="params">(<span name="grouped">grouped: <span class="extype" name="com.twitter.scalding.Grouped">Grouped</span>[<span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.run.K">K</span>, <span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.run.V">V</span>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.util.Try" class="extype" target="_top">Try</a>[<span class="extype" name="scala.Iterable">Iterable</span>[(<span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.run.K">K</span>, <span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.run.V">V</span>)]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@run[K,V](grouped:com.twitter.scalding.Grouped[K,V]):scala.util.Try[Iterable[(K,V)]]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Runs the provided <span class="extype" name="Grouped">Grouped</span> and returns <span class="extype" name="Try">Try</span> with the iterable of the result.</p>
+    </li><li name="au.com.cba.omnia.thermometer.tools.ExecutionSupport#run" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="run[T](pipe:com.twitter.scalding.TypedPipe[T]):scala.util.Try[Iterable[T]]"></a>
+      <a id="run[T](TypedPipe[T]):Try[Iterable[T]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">run</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="pipe">pipe: <span class="extype" name="com.twitter.scalding.TypedPipe">TypedPipe</span>[<span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.run.T">T</span>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.util.Try" class="extype" target="_top">Try</a>[<span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.run.T">T</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@run[T](pipe:com.twitter.scalding.TypedPipe[T]):scala.util.Try[Iterable[T]]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Runs the provided pipe and returns <span class="extype" name="Try">Try</span> with the iterable of the result.</p>
+    </li><li name="au.com.cba.omnia.thermometer.tools.ExecutionSupport#runsSuccessfully" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="runsSuccessfully[K,V](grouped:com.twitter.scalding.Grouped[K,V]):Iterable[(K,V)]"></a>
+      <a id="runsSuccessfully[K,V](Grouped[K,V]):Iterable[(K,V)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">runsSuccessfully</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="params">(<span name="grouped">grouped: <span class="extype" name="com.twitter.scalding.Grouped">Grouped</span>[<span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.runsSuccessfully.K">K</span>, <span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.runsSuccessfully.V">V</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Iterable">Iterable</span>[(<span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.runsSuccessfully.K">K</span>, <span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.runsSuccessfully.V">V</span>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@runsSuccessfully[K,V](grouped:com.twitter.scalding.Grouped[K,V]):Iterable[(K,V)]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Checks that the provided <span class="extype" name="Grouped">Grouped</span> runs successfully and returns an iterable of the content.</p>
+    </li><li name="au.com.cba.omnia.thermometer.tools.ExecutionSupport#runsSuccessfully" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="runsSuccessfully[T](pipe:com.twitter.scalding.TypedPipe[T]):Iterable[T]"></a>
+      <a id="runsSuccessfully[T](TypedPipe[T]):Iterable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">runsSuccessfully</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="pipe">pipe: <span class="extype" name="com.twitter.scalding.TypedPipe">TypedPipe</span>[<span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.runsSuccessfully.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.runsSuccessfully.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@runsSuccessfully[T](pipe:com.twitter.scalding.TypedPipe[T]):Iterable[T]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Checks that the provided pipe runs successfully and returns an iterable of the content.</p>
     </li><li name="com.twitter.scalding.FieldConversions#strFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="strFields[T&lt;:TraversableOnce[String]](f:T):cascading.tuple.Fields"></a>
       <a id="strFields[T&lt;:TraversableOnce[String]](T):Fields"></a>
@@ -676,7 +892,11 @@ Takes an optional map of arguments.
       <span class="symbol">
         <span class="name">strFields</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="scala.TraversableOnce">TraversableOnce</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>]</span><span class="params">(<span name="f">f: <span class="extype" name="com.twitter.scalding.FieldConversions.strFields.T">T</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@strFields[T&lt;:TraversableOnce[String]](f:T):cascading.tuple.Fields" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="com.twitter.scalding.FieldConversions#stringToFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="stringToFields(x:String):cascading.tuple.Fields"></a>
@@ -689,7 +909,11 @@ Takes an optional map of arguments.
       <span class="symbol">
         <span class="name">stringToFields</span><span class="params">(<span name="x">x: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@stringToFields(x:String):cascading.tuple.Fields" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="com.twitter.scalding.FieldConversions#symbolToFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="symbolToFields(x:Symbol):cascading.tuple.Fields"></a>
@@ -700,9 +924,13 @@ Takes an optional map of arguments.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">symbolToFields</span><span class="params">(<span name="x">x: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Symbol" class="extype" target="_top">Symbol</a></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
+        <span class="name">symbolToFields</span><span class="params">(<span name="x">x: <span class="extype" name="scala.Symbol">Symbol</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@symbolToFields(x:Symbol):cascading.tuple.Fields" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
@@ -715,7 +943,11 @@ Takes an optional map of arguments.
       <span class="symbol">
         <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
@@ -728,7 +960,11 @@ Takes an optional map of arguments.
       <span class="symbol">
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@toString():String" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="com.twitter.scalding.FieldConversions#tuple2ToFieldsPair" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="tuple2ToFieldsPair[T,U](pair:(T,U))(implicittf:T=&gt;cascading.tuple.Fields,implicituf:U=&gt;cascading.tuple.Fields):(cascading.tuple.Fields,cascading.tuple.Fields)"></a>
@@ -741,7 +977,11 @@ Takes an optional map of arguments.
       <span class="symbol">
         <span class="name">tuple2ToFieldsPair</span><span class="tparams">[<span name="T">T</span>, <span name="U">U</span>]</span><span class="params">(<span name="pair">pair: (<span class="extype" name="com.twitter.scalding.FieldConversions.tuple2ToFieldsPair.T">T</span>, <span class="extype" name="com.twitter.scalding.FieldConversions.tuple2ToFieldsPair.U">U</span>)</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="tf">tf: (<span class="extype" name="com.twitter.scalding.FieldConversions.tuple2ToFieldsPair.T">T</span>) ⇒ <span class="extype" name="cascading.tuple.Fields">Fields</span></span>, <span name="uf">uf: (<span class="extype" name="com.twitter.scalding.FieldConversions.tuple2ToFieldsPair.U">U</span>) ⇒ <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="result">: (<span class="extype" name="cascading.tuple.Fields">Fields</span>, <span class="extype" name="cascading.tuple.Fields">Fields</span>)</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@tuple2ToFieldsPair[T,U](pair:(T,U))(implicittf:T=&gt;cascading.tuple.Fields,implicituf:U=&gt;cascading.tuple.Fields):(cascading.tuple.Fields,cascading.tuple.Fields)" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="com.twitter.scalding.FieldConversions#unitToFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="unitToFields(u:Unit):cascading.tuple.Fields"></a>
@@ -752,9 +992,13 @@ Takes an optional map of arguments.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">unitToFields</span><span class="params">(<span name="u">u: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
+        <span class="name">unitToFields</span><span class="params">(<span name="u">u: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@unitToFields(u:Unit):cascading.tuple.Fields" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
@@ -765,9 +1009,13 @@ Takes an optional map of arguments.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@wait():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -784,9 +1032,13 @@ Takes an optional map of arguments.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -803,9 +1055,13 @@ Takes an optional map of arguments.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -829,9 +1085,9 @@ Takes an optional map of arguments.
             </div><div class="parent" name="com.twitter.scalding.LowPriorityFieldConversions">
               <h3>Inherited from <span class="extype" name="com.twitter.scalding.LowPriorityFieldConversions">LowPriorityFieldConversions</span></h3>
             </div><div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
             </div>
         
         </div>
@@ -848,6 +1104,7 @@ Takes an optional map of arguments.
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../../../lib/template.js"></script>
+
+
     </body>
       </html>

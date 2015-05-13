@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html >
 <html>
         <head>
           <title>PathFactoids - au.com.cba.omnia.thermometer.fact.PathFactoids</title>
@@ -9,6 +8,11 @@
           
       <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/tools.tooltip.js"></script>
+      
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../../../index.html';
@@ -26,7 +30,13 @@
       <div id="definition">
         <img src="../../../../../../lib/object_big.png" />
         <p id="owner"><a href="../../../../../package.html" class="extype" name="au">au</a>.<a href="../../../../package.html" class="extype" name="au.com">com</a>.<a href="../../../package.html" class="extype" name="au.com.cba">cba</a>.<a href="../../package.html" class="extype" name="au.com.cba.omnia">omnia</a>.<a href="../package.html" class="extype" name="au.com.cba.omnia.thermometer">thermometer</a>.<a href="package.html" class="extype" name="au.com.cba.omnia.thermometer.fact">fact</a></p>
-        <h1>PathFactoids</h1>
+        <h1>PathFactoids</h1><h3><span class="morelinks"><div>Related Doc:
+            <a href="package.html" class="extype" name="au.com.cba.omnia.thermometer.fact">package fact</a>
+          </div></span></h3><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       </div>
 
       <h4 id="signature" class="signature">
@@ -39,9 +49,9 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/CommBank/thermometer/tree/cbeb5fa9dcf8cba0fa748edeedb3cf93c32ec6c9//core/src/main/scala/au/com/cba/omnia/thermometer/fact/PathFact.scala" target="_blank">PathFact.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/CommBank/thermometer/tree/Dirty(a6bcf7fe3685676f68923e42aa751d25a2c1e912)//core/src/main/scala/au/com/cba/omnia/thermometer/fact/PathFact.scala" target="_blank">PathFact.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="org.specs2.matcher.ThrownExpectations">ThrownExpectations</span>, <span class="extype" name="org.specs2.matcher.StandardMatchResults">StandardMatchResults</span>, <span class="extype" name="org.specs2.execute.StandardResults">StandardResults</span>, <span class="extype" name="org.specs2.matcher.Expectations">Expectations</span>, <span class="extype" name="org.specs2.matcher.MatchResultStackTrace">MatchResultStackTrace</span>, <span class="extype" name="org.specs2.matcher.CanBeEqual">CanBeEqual</span>, <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="org.specs2.matcher.ThrownExpectations">ThrownExpectations</span>, <span class="extype" name="org.specs2.matcher.ThrownExpectationsCreation">ThrownExpectationsCreation</span>, <span class="extype" name="org.specs2.matcher.StandardMatchResults">StandardMatchResults</span>, <span class="extype" name="org.specs2.execute.StandardResults">StandardResults</span>, <span class="extype" name="org.specs2.matcher.ExpectationsCreation">ExpectationsCreation</span>, <span class="extype" name="org.specs2.matcher.MatchResultStackTrace">MatchResultStackTrace</span>, <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div></div>
         
 
@@ -59,7 +69,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="au.com.cba.omnia.thermometer.fact.PathFactoids"><span>PathFactoids</span></li><li class="in" name="org.specs2.matcher.ThrownExpectations"><span>ThrownExpectations</span></li><li class="in" name="org.specs2.matcher.StandardMatchResults"><span>StandardMatchResults</span></li><li class="in" name="org.specs2.execute.StandardResults"><span>StandardResults</span></li><li class="in" name="org.specs2.matcher.Expectations"><span>Expectations</span></li><li class="in" name="org.specs2.matcher.MatchResultStackTrace"><span>MatchResultStackTrace</span></li><li class="in" name="org.specs2.matcher.CanBeEqual"><span>CanBeEqual</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="au.com.cba.omnia.thermometer.fact.PathFactoids"><span>PathFactoids</span></li><li class="in" name="org.specs2.matcher.ThrownExpectations"><span>ThrownExpectations</span></li><li class="in" name="org.specs2.matcher.ThrownExpectationsCreation"><span>ThrownExpectationsCreation</span></li><li class="in" name="org.specs2.matcher.StandardMatchResults"><span>StandardMatchResults</span></li><li class="in" name="org.specs2.execute.StandardResults"><span>StandardResults</span></li><li class="in" name="org.specs2.matcher.ExpectationsCreation"><span>ExpectationsCreation</span></li><li class="in" name="org.specs2.matcher.MatchResultStackTrace"><span>MatchResultStackTrace</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -79,81 +89,13 @@
         <div id="allMembers">
         
 
-        <div id="types" class="types members">
-              <h3>Type Members</h3>
-              <ol><li name="org.specs2.matcher.CanBeEqual.CanBeEqualExpectation" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="CanBeEqualExpectation[T&lt;:&lt;?&gt;]extendsAnyRef"></a>
-      <a id="CanBeEqualExpectation[T]:org.specs2.matcher.Expectations.CanBeEqualExpectation[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <span class="name">CanBeEqualExpectation</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>CanBeEqual</dd></dl></div>
-    </li><li name="org.specs2.matcher.Expectations.Descriptible" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="Descriptible[T&lt;:&lt;?&gt;]extendsAnyRef"></a>
-      <a id="Descriptible[T]:Descriptible[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <span class="name">Descriptible</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Expectations</dd></dl></div>
-    </li><li name="org.specs2.execute.StandardResults.pendingResult" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="pendingResultextendsAnyRef"></a>
-      <a id="pendingResult:pendingResult"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <span class="name">pendingResult</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>StandardResults</dd></dl></div>
-    </li><li name="org.specs2.execute.StandardResults.skippedResult" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="skippedResultextendsAnyRef"></a>
-      <a id="skippedResult:skippedResult"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <span class="name">skippedResult</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>StandardResults</dd></dl></div>
-    </li></ol>
-            </div>
+        
 
         
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
               <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="!=(x$1:AnyRef):Boolean"></a>
-      <a id="!=(AnyRef):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a>
       <a id="!=(Any):Boolean"></a>
       <h4 class="signature">
@@ -162,10 +104,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <a id="##():Int"></a>
@@ -175,24 +121,15 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@##():Int" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="==(x$1:AnyRef):Boolean"></a>
-      <a id="==(AnyRef):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a>
       <a id="==(Any):Boolean"></a>
       <h4 class="signature">
@@ -201,11 +138,15 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="org.specs2.matcher.ThrownExpectations#anError" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.specs2.matcher.ThrownExpectationsCreation#anError" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="anError:org.specs2.execute.Error"></a>
       <a id="anError:Error"></a>
       <h4 class="signature">
@@ -216,8 +157,12 @@
       <span class="symbol">
         <span class="name">anError</span><span class="result">: <span class="extype" name="org.specs2.execute.Error">Error</span></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ThrownExpectations → StandardResults</dd></dl></div>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@anError:org.specs2.execute.Error" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ThrownExpectationsCreation → StandardResults</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -229,21 +174,12 @@
       <span class="symbol">
         <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="org.specs2.matcher.CanBeEqual#canBeEqual" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="canBeEqual[T](t:=&gt;T):CanBeEqual.this.CanBeEqualExpectation[T]"></a>
-      <a id="canBeEqual[T](⇒T):CanBeEqualExpectation[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">canBeEqual</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="t">t: ⇒ <span class="extype" name="org.specs2.matcher.CanBeEqual.canBeEqual.T">T</span></span>)</span><span class="result">: <a href="#CanBeEqualExpectation[T]extendsAnyRef" class="extmbr" name="au.com.cba.omnia.thermometer.fact.PathFactoids.CanBeEqualExpectation">CanBeEqualExpectation</a>[<span class="extype" name="org.specs2.matcher.CanBeEqual.canBeEqual.T">T</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>CanBeEqual</dd></dl></div>
     </li><li name="au.com.cba.omnia.thermometer.fact.PathFactoids#checkEquality" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="checkEquality[A,B](actual:List[A],expected:List[A],adapter:A=&gt;B,koMessage:String):org.specs2.execute.Result"></a>
       <a id="checkEquality[A,B](List[A],List[A],(A)⇒B,String):Result"></a>
@@ -255,10 +191,14 @@
       <span class="symbol">
         <span class="name">checkEquality</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="actual">actual: <span class="extype" name="scala.List">List</span>[<span class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoids.checkEquality.A">A</span>]</span>, <span name="expected">expected: <span class="extype" name="scala.List">List</span>[<span class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoids.checkEquality.A">A</span>]</span>, <span name="adapter">adapter: (<span class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoids.checkEquality.A">A</span>) ⇒ <span class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoids.checkEquality.B">B</span></span>, <span name="koMessage">koMessage: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="org.specs2.execute.Result">Result</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@checkEquality[A,B](actual:List[A],expected:List[A],adapter:A=&gt;B,koMessage:String):org.specs2.execute.Result" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="org.specs2.matcher.Expectations#checkFailure" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="checkFailure[T&lt;:&lt;?&gt;](m:&lt;?&gt;):org.specs2.matcher.MatchResult[T]"></a>
+    </li><li name="org.specs2.matcher.ExpectationsCreation#checkFailure" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="checkFailure[T](m:org.specs2.matcher.MatchResult[T]):org.specs2.matcher.MatchResult[T]"></a>
       <a id="checkFailure[T](MatchResult[T]):MatchResult[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -266,11 +206,15 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">checkFailure</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="m">m: <span class="extype" name="org.specs2.matcher.MatchResult">MatchResult</span>[<span class="extype" name="org.specs2.matcher.Expectations.checkFailure.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="org.specs2.matcher.MatchResult">MatchResult</span>[<span class="extype" name="org.specs2.matcher.Expectations.checkFailure.T">T</span>]</span>
+        <span class="name">checkFailure</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="m">m: <span class="extype" name="org.specs2.matcher.MatchResult">MatchResult</span>[<span class="extype" name="org.specs2.matcher.ExpectationsCreation.checkFailure.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="org.specs2.matcher.MatchResult">MatchResult</span>[<span class="extype" name="org.specs2.matcher.ExpectationsCreation.checkFailure.T">T</span>]</span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Expectations</dd></dl></div>
-    </li><li name="org.specs2.matcher.ThrownExpectations#checkMatchResultFailure" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@checkFailure[T](m:org.specs2.matcher.MatchResult[T]):org.specs2.matcher.MatchResult[T]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>ExpectationsCreation</dd></dl></div>
+    </li><li name="org.specs2.matcher.ThrownExpectationsCreation#checkMatchResultFailure" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="checkMatchResultFailure[T](m:org.specs2.matcher.MatchResult[T]):org.specs2.matcher.MatchResult[T]"></a>
       <a id="checkMatchResultFailure[T](MatchResult[T]):MatchResult[T]"></a>
       <h4 class="signature">
@@ -279,11 +223,15 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">checkMatchResultFailure</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="m">m: <span class="extype" name="org.specs2.matcher.MatchResult">MatchResult</span>[<span class="extype" name="org.specs2.matcher.ThrownExpectations.checkMatchResultFailure.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="org.specs2.matcher.MatchResult">MatchResult</span>[<span class="extype" name="org.specs2.matcher.ThrownExpectations.checkMatchResultFailure.T">T</span>]</span>
+        <span class="name">checkMatchResultFailure</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="m">m: <span class="extype" name="org.specs2.matcher.MatchResult">MatchResult</span>[<span class="extype" name="org.specs2.matcher.ThrownExpectationsCreation.checkMatchResultFailure.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="org.specs2.matcher.MatchResult">MatchResult</span>[<span class="extype" name="org.specs2.matcher.ThrownExpectationsCreation.checkMatchResultFailure.T">T</span>]</span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>ThrownExpectations → Expectations</dd></dl></div>
-    </li><li name="org.specs2.matcher.ThrownExpectations#checkResultFailure" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@checkMatchResultFailure[T](m:org.specs2.matcher.MatchResult[T]):org.specs2.matcher.MatchResult[T]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>ThrownExpectationsCreation → ExpectationsCreation</dd></dl></div>
+    </li><li name="org.specs2.matcher.ThrownExpectationsCreation#checkResultFailure" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="checkResultFailure(result:=&gt;org.specs2.execute.Result):org.specs2.execute.Result"></a>
       <a id="checkResultFailure(⇒Result):Result"></a>
       <h4 class="signature">
@@ -294,8 +242,12 @@
       <span class="symbol">
         <span class="name">checkResultFailure</span><span class="params">(<span name="result">result: ⇒ <span class="extype" name="org.specs2.execute.Result">Result</span></span>)</span><span class="result">: <span class="extype" name="org.specs2.execute.Result">Result</span></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>ThrownExpectations → Expectations</dd></dl></div>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@checkResultFailure(result:=&gt;org.specs2.execute.Result):org.specs2.execute.Result" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>ThrownExpectationsCreation → ExpectationsCreation</dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -305,9 +257,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@clone():Object" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -324,9 +280,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">conditional</span><span class="params">(<span name="cond">cond: (<a href="../context/Context.html" class="extype" name="au.com.cba.omnia.thermometer.context.Context">Context</a>, <span class="extype" name="org.apache.hadoop.fs.Path">Path</span>) ⇒ <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="params">(<span name="message">message: (<span class="extype" name="org.apache.hadoop.fs.Path">Path</span>) ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="PathFactoid.html" class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoid">PathFactoid</a></span>
+        <span class="name">conditional</span><span class="params">(<span name="cond">cond: (<a href="../context/Context.html" class="extype" name="au.com.cba.omnia.thermometer.context.Context">Context</a>, <span class="extype" name="org.apache.hadoop.fs.Path">Path</span>) ⇒ <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="params">(<span name="message">message: (<span class="extype" name="org.apache.hadoop.fs.Path">Path</span>) ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="PathFactoid.html" class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoid">PathFactoid</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@conditional(cond:(au.com.cba.omnia.thermometer.context.Context,org.apache.hadoop.fs.Path)=&gt;Boolean)(message:org.apache.hadoop.fs.Path=&gt;String):au.com.cba.omnia.thermometer.fact.PathFactoid" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="au.com.cba.omnia.thermometer.fact.PathFactoids#count" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="count(n:Int):au.com.cba.omnia.thermometer.fact.PathFactoid"></a>
@@ -337,11 +297,15 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">count</span><span class="params">(<span name="n">n: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="PathFactoid.html" class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoid">PathFactoid</a></span>
+        <span class="name">count</span><span class="params">(<span name="n">n: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="PathFactoid.html" class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoid">PathFactoid</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@count(n:Int):au.com.cba.omnia.thermometer.fact.PathFactoid" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="org.specs2.matcher.ThrownExpectations#createExpectable" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.specs2.matcher.ThrownExpectationsCreation#createExpectable" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="createExpectable[T](t:=&gt;T,alias:Option[String=&gt;String]):org.specs2.matcher.Expectable[T]"></a>
       <a id="createExpectable[T](⇒T,Option[(String)⇒String]):Expectable[T]"></a>
       <h4 class="signature">
@@ -350,11 +314,15 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">createExpectable</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="t">t: ⇒ <span class="extype" name="org.specs2.matcher.ThrownExpectations.createExpectable.T">T</span></span>, <span name="alias">alias: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Option" class="extype" target="_top">Option</a>[(<span class="extype" name="scala.Predef.String">String</span>) ⇒ <span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="org.specs2.matcher.Expectable">Expectable</span>[<span class="extype" name="org.specs2.matcher.ThrownExpectations.createExpectable.T">T</span>]</span>
+        <span class="name">createExpectable</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="t">t: ⇒ <span class="extype" name="org.specs2.matcher.ThrownExpectationsCreation.createExpectable.T">T</span></span>, <span name="alias">alias: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Option" class="extype" target="_top">Option</a>[(<span class="extype" name="scala.Predef.String">String</span>) ⇒ <span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="org.specs2.matcher.Expectable">Expectable</span>[<span class="extype" name="org.specs2.matcher.ThrownExpectationsCreation.createExpectable.T">T</span>]</span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ThrownExpectations → Expectations</dd></dl></div>
-    </li><li name="org.specs2.matcher.Expectations#createExpectable" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@createExpectable[T](t:=&gt;T,alias:Option[String=&gt;String]):org.specs2.matcher.Expectable[T]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ThrownExpectationsCreation → ExpectationsCreation</dd></dl></div>
+    </li><li name="org.specs2.matcher.ExpectationsCreation#createExpectable" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="createExpectable[T](t:=&gt;T,alias:String=&gt;String):org.specs2.matcher.Expectable[T]"></a>
       <a id="createExpectable[T](⇒T,(String)⇒String):Expectable[T]"></a>
       <h4 class="signature">
@@ -363,11 +331,15 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">createExpectable</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="t">t: ⇒ <span class="extype" name="org.specs2.matcher.Expectations.createExpectable.T">T</span></span>, <span name="alias">alias: (<span class="extype" name="scala.Predef.String">String</span>) ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="org.specs2.matcher.Expectable">Expectable</span>[<span class="extype" name="org.specs2.matcher.Expectations.createExpectable.T">T</span>]</span>
+        <span class="name">createExpectable</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="t">t: ⇒ <span class="extype" name="org.specs2.matcher.ExpectationsCreation.createExpectable.T">T</span></span>, <span name="alias">alias: (<span class="extype" name="scala.Predef.String">String</span>) ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="org.specs2.matcher.Expectable">Expectable</span>[<span class="extype" name="org.specs2.matcher.ExpectationsCreation.createExpectable.T">T</span>]</span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Expectations</dd></dl></div>
-    </li><li name="org.specs2.matcher.Expectations#createExpectable" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@createExpectable[T](t:=&gt;T,alias:String=&gt;String):org.specs2.matcher.Expectable[T]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ExpectationsCreation</dd></dl></div>
+    </li><li name="org.specs2.matcher.ExpectationsCreation#createExpectable" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="createExpectable[T](t:=&gt;T,alias:=&gt;String):org.specs2.matcher.Expectable[T]"></a>
       <a id="createExpectable[T](⇒T,⇒String):Expectable[T]"></a>
       <h4 class="signature">
@@ -376,11 +348,15 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">createExpectable</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="t">t: ⇒ <span class="extype" name="org.specs2.matcher.Expectations.createExpectable.T">T</span></span>, <span name="alias">alias: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="org.specs2.matcher.Expectable">Expectable</span>[<span class="extype" name="org.specs2.matcher.Expectations.createExpectable.T">T</span>]</span>
+        <span class="name">createExpectable</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="t">t: ⇒ <span class="extype" name="org.specs2.matcher.ExpectationsCreation.createExpectable.T">T</span></span>, <span name="alias">alias: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="org.specs2.matcher.Expectable">Expectable</span>[<span class="extype" name="org.specs2.matcher.ExpectationsCreation.createExpectable.T">T</span>]</span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Expectations</dd></dl></div>
-    </li><li name="org.specs2.matcher.Expectations#createExpectable" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@createExpectable[T](t:=&gt;T,alias:=&gt;String):org.specs2.matcher.Expectable[T]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ExpectationsCreation</dd></dl></div>
+    </li><li name="org.specs2.matcher.ExpectationsCreation#createExpectable" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="createExpectable[T](t:=&gt;T):org.specs2.matcher.Expectable[T]"></a>
       <a id="createExpectable[T](⇒T):Expectable[T]"></a>
       <h4 class="signature">
@@ -389,11 +365,15 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">createExpectable</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="t">t: ⇒ <span class="extype" name="org.specs2.matcher.Expectations.createExpectable.T">T</span></span>)</span><span class="result">: <span class="extype" name="org.specs2.matcher.Expectable">Expectable</span>[<span class="extype" name="org.specs2.matcher.Expectations.createExpectable.T">T</span>]</span>
+        <span class="name">createExpectable</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="t">t: ⇒ <span class="extype" name="org.specs2.matcher.ExpectationsCreation.createExpectable.T">T</span></span>)</span><span class="result">: <span class="extype" name="org.specs2.matcher.Expectable">Expectable</span>[<span class="extype" name="org.specs2.matcher.ExpectationsCreation.createExpectable.T">T</span>]</span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Expectations</dd></dl></div>
-    </li><li name="org.specs2.matcher.ThrownExpectations#createExpectableWithShowAs" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@createExpectable[T](t:=&gt;T):org.specs2.matcher.Expectable[T]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ExpectationsCreation</dd></dl></div>
+    </li><li name="org.specs2.matcher.ThrownExpectationsCreation#createExpectableWithShowAs" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="createExpectableWithShowAs[T](t:=&gt;T,show:=&gt;String):org.specs2.matcher.Expectable[T]"></a>
       <a id="createExpectableWithShowAs[T](⇒T,⇒String):Expectable[T]"></a>
       <h4 class="signature">
@@ -402,23 +382,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">createExpectableWithShowAs</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="t">t: ⇒ <span class="extype" name="org.specs2.matcher.ThrownExpectations.createExpectableWithShowAs.T">T</span></span>, <span name="show">show: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="org.specs2.matcher.Expectable">Expectable</span>[<span class="extype" name="org.specs2.matcher.ThrownExpectations.createExpectableWithShowAs.T">T</span>]</span>
+        <span class="name">createExpectableWithShowAs</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="t">t: ⇒ <span class="extype" name="org.specs2.matcher.ThrownExpectationsCreation.createExpectableWithShowAs.T">T</span></span>, <span name="show">show: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="org.specs2.matcher.Expectable">Expectable</span>[<span class="extype" name="org.specs2.matcher.ThrownExpectationsCreation.createExpectableWithShowAs.T">T</span>]</span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ThrownExpectations → Expectations</dd></dl></div>
-    </li><li name="org.specs2.matcher.Expectations#describe" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="describe[T](t:=&gt;T):Expectations.this.Descriptible[T]"></a>
-      <a id="describe[T](⇒T):Descriptible[T]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">describe</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="t">t: ⇒ <span class="extype" name="org.specs2.matcher.Expectations.describe.T">T</span></span>)</span><span class="result">: <a href="#Descriptible[T]extendsAnyRef" class="extmbr" name="au.com.cba.omnia.thermometer.fact.PathFactoids.Descriptible">Descriptible</a>[<span class="extype" name="org.specs2.matcher.Expectations.describe.T">T</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Expectations</dd></dl></div>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@createExpectableWithShowAs[T](t:=&gt;T,show:=&gt;String):org.specs2.matcher.Expectable[T]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ThrownExpectationsCreation → ExpectationsCreation</dd></dl></div>
     </li><li name="org.specs2.execute.StandardResults#done" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="done:org.specs2.execute.Success"></a>
       <a id="done:Success"></a>
@@ -430,7 +401,11 @@
       <span class="symbol">
         <span class="name">done</span><span class="result">: <span class="extype" name="org.specs2.execute.Success">Success</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@done:org.specs2.execute.Success" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>StandardResults</dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
@@ -441,9 +416,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="equals(x$1:Any):Boolean"></a>
@@ -454,9 +433,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="au.com.cba.omnia.thermometer.fact.PathFactoids#exists" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="exists:au.com.cba.omnia.thermometer.fact.PathFactoid"></a>
@@ -469,9 +452,13 @@
       <span class="symbol">
         <span class="name">exists</span><span class="result">: <a href="PathFactoid.html" class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoid">PathFactoid</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@exists:au.com.cba.omnia.thermometer.fact.PathFactoid" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="org.specs2.matcher.ThrownExpectations#failure" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.specs2.matcher.ThrownExpectationsCreation#failure" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="failure(f:org.specs2.execute.Failure):org.specs2.execute.Failure"></a>
       <a id="failure(Failure):Failure"></a>
       <h4 class="signature">
@@ -482,9 +469,13 @@
       <span class="symbol">
         <span class="name">failure</span><span class="params">(<span name="f">f: <span class="extype" name="org.specs2.execute.Failure">Failure</span></span>)</span><span class="result">: <span class="extype" name="org.specs2.execute.Failure">Failure</span></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>ThrownExpectations</dd></dl></div>
-    </li><li name="org.specs2.matcher.ThrownExpectations#failure" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@failure(f:org.specs2.execute.Failure):org.specs2.execute.Failure" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>ThrownExpectationsCreation</dd></dl></div>
+    </li><li name="org.specs2.matcher.ThrownExpectationsCreation#failure" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="failure(m:String):org.specs2.execute.Failure"></a>
       <a id="failure(String):Failure"></a>
       <h4 class="signature">
@@ -495,9 +486,13 @@
       <span class="symbol">
         <span class="name">failure</span><span class="params">(<span name="m">m: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="org.specs2.execute.Failure">Failure</span></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>ThrownExpectations</dd></dl></div>
-    </li><li name="org.specs2.matcher.ThrownExpectations#failure" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@failure(m:String):org.specs2.execute.Failure" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>ThrownExpectationsCreation</dd></dl></div>
+    </li><li name="org.specs2.matcher.ThrownExpectationsCreation#failure" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="failure:org.specs2.execute.Failure"></a>
       <a id="failure:Failure"></a>
       <h4 class="signature">
@@ -508,8 +503,12 @@
       <span class="symbol">
         <span class="name">failure</span><span class="result">: <span class="extype" name="org.specs2.execute.Failure">Failure</span></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ThrownExpectations → StandardResults</dd></dl></div>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@failure:org.specs2.execute.Failure" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ThrownExpectationsCreation → StandardResults</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -519,9 +518,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -540,7 +543,11 @@
       <span class="symbol">
         <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
@@ -551,9 +558,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -564,9 +575,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="org.specs2.matcher.StandardMatchResults#ko" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ko(m:String):org.specs2.matcher.MatchResult[Any]"></a>
@@ -577,11 +592,15 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ko</span><span class="params">(<span name="m">m: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="org.specs2.matcher.MatchResult">MatchResult</span>[<a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>
+        <span class="name">ko</span><span class="params">(<span name="m">m: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="org.specs2.matcher.MatchResult">MatchResult</span>[<a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@ko(m:String):org.specs2.matcher.MatchResult[Any]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>StandardMatchResults</dd></dl></div>
-    </li><li name="org.specs2.matcher.ThrownExpectations#ko" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.specs2.matcher.ThrownExpectationsCreation#ko" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ko:org.specs2.matcher.MatchResult[Any]"></a>
       <a id="ko:MatchResult[Any]"></a>
       <h4 class="signature">
@@ -590,10 +609,14 @@
         <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
-        <span class="name">ko</span><span class="result">: <span class="extype" name="org.specs2.matcher.MatchResult">MatchResult</span>[<a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>
+        <span class="name">ko</span><span class="result">: <span class="extype" name="org.specs2.matcher.MatchResult">MatchResult</span>[<a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ThrownExpectations → StandardMatchResults</dd></dl></div>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@ko:org.specs2.matcher.MatchResult[Any]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ThrownExpectationsCreation → StandardMatchResults</dd></dl></div>
     </li><li name="au.com.cba.omnia.thermometer.fact.PathFactoids#lines" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="lines(expected:List[String]):au.com.cba.omnia.thermometer.fact.PathFactoid"></a>
       <a id="lines(List[String]):PathFactoid"></a>
@@ -605,10 +628,14 @@
       <span class="symbol">
         <span class="name">lines</span><span class="params">(<span name="expected">expected: <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <a href="PathFactoid.html" class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoid">PathFactoid</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@lines(expected:List[String]):au.com.cba.omnia.thermometer.fact.PathFactoid" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       
-    </li><li name="org.specs2.matcher.Expectations#mapMatchResult" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapMatchResult[T&lt;:&lt;?&gt;](m:&lt;?&gt;):org.specs2.matcher.MatchResult[T]"></a>
+    </li><li name="org.specs2.matcher.ExpectationsCreation#mapMatchResult" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mapMatchResult[T](m:org.specs2.matcher.MatchResult[T]):org.specs2.matcher.MatchResult[T]"></a>
       <a id="mapMatchResult[T](MatchResult[T]):MatchResult[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -616,10 +643,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">mapMatchResult</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="m">m: <span class="extype" name="org.specs2.matcher.MatchResult">MatchResult</span>[<span class="extype" name="org.specs2.matcher.Expectations.mapMatchResult.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="org.specs2.matcher.MatchResult">MatchResult</span>[<span class="extype" name="org.specs2.matcher.Expectations.mapMatchResult.T">T</span>]</span>
+        <span class="name">mapMatchResult</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="m">m: <span class="extype" name="org.specs2.matcher.MatchResult">MatchResult</span>[<span class="extype" name="org.specs2.matcher.ExpectationsCreation.mapMatchResult.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="org.specs2.matcher.MatchResult">MatchResult</span>[<span class="extype" name="org.specs2.matcher.ExpectationsCreation.mapMatchResult.T">T</span>]</span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Expectations</dd></dl></div>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@mapMatchResult[T](m:org.specs2.matcher.MatchResult[T]):org.specs2.matcher.MatchResult[T]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>ExpectationsCreation</dd></dl></div>
     </li><li name="au.com.cba.omnia.thermometer.fact.PathFactoids#missing" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="missing:au.com.cba.omnia.thermometer.fact.PathFactoid"></a>
       <a id="missing:PathFactoid"></a>
@@ -631,7 +662,11 @@
       <span class="symbol">
         <span class="name">missing</span><span class="result">: <a href="PathFactoid.html" class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoid">PathFactoid</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@missing:au.com.cba.omnia.thermometer.fact.PathFactoid" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
@@ -642,9 +677,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
@@ -655,9 +694,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@notify():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
@@ -668,9 +711,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="org.specs2.matcher.StandardMatchResults#ok" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ok(m:String):org.specs2.matcher.MatchResult[Any]"></a>
@@ -681,9 +728,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ok</span><span class="params">(<span name="m">m: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="org.specs2.matcher.MatchResult">MatchResult</span>[<a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>
+        <span class="name">ok</span><span class="params">(<span name="m">m: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="org.specs2.matcher.MatchResult">MatchResult</span>[<a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@ok(m:String):org.specs2.matcher.MatchResult[Any]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>StandardMatchResults</dd></dl></div>
     </li><li name="org.specs2.matcher.StandardMatchResults#ok" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ok:org.specs2.matcher.MatchResult[Any]"></a>
@@ -694,11 +745,15 @@
         <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
-        <span class="name">ok</span><span class="result">: <span class="extype" name="org.specs2.matcher.MatchResult">MatchResult</span>[<a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>
+        <span class="name">ok</span><span class="result">: <span class="extype" name="org.specs2.matcher.MatchResult">MatchResult</span>[<a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@ok:org.specs2.matcher.MatchResult[Any]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>StandardMatchResults</dd></dl></div>
-    </li><li name="org.specs2.matcher.ThrownExpectations#pending" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.specs2.matcher.ThrownExpectationsCreation#pending" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="pending(p:org.specs2.execute.Pending):org.specs2.execute.Pending"></a>
       <a id="pending(Pending):Pending"></a>
       <h4 class="signature">
@@ -709,9 +764,13 @@
       <span class="symbol">
         <span class="name">pending</span><span class="params">(<span name="p">p: <span class="extype" name="org.specs2.execute.Pending">Pending</span></span>)</span><span class="result">: <span class="extype" name="org.specs2.execute.Pending">Pending</span></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>ThrownExpectations</dd></dl></div>
-    </li><li name="org.specs2.matcher.ThrownExpectations#pending" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@pending(p:org.specs2.execute.Pending):org.specs2.execute.Pending" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>ThrownExpectationsCreation</dd></dl></div>
+    </li><li name="org.specs2.matcher.ThrownExpectationsCreation#pending" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="pending(m:String):org.specs2.execute.Pending"></a>
       <a id="pending(String):Pending"></a>
       <h4 class="signature">
@@ -722,9 +781,13 @@
       <span class="symbol">
         <span class="name">pending</span><span class="params">(<span name="m">m: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="org.specs2.execute.Pending">Pending</span></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ThrownExpectations → StandardResults</dd></dl></div>
-    </li><li name="org.specs2.matcher.ThrownExpectations#pending" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@pending(m:String):org.specs2.execute.Pending" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ThrownExpectationsCreation → StandardResults</dd></dl></div>
+    </li><li name="org.specs2.matcher.ThrownExpectationsCreation#pending" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="pending:org.specs2.execute.Pending"></a>
       <a id="pending:Pending"></a>
       <h4 class="signature">
@@ -735,8 +798,12 @@
       <span class="symbol">
         <span class="name">pending</span><span class="result">: <span class="extype" name="org.specs2.execute.Pending">Pending</span></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ThrownExpectations → StandardResults</dd></dl></div>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@pending:org.specs2.execute.Pending" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ThrownExpectationsCreation → StandardResults</dd></dl></div>
     </li><li name="org.specs2.execute.StandardResults#pending" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="pending[R](r:=&gt;R)(implicitevidence$1:org.specs2.execute.AsResult[R]):org.specs2.execute.Pending"></a>
       <a id="pending[R](⇒R)(AsResult[R]):Pending"></a>
@@ -748,7 +815,11 @@
       <span class="symbol">
         <span class="name">pending</span><span class="tparams">[<span name="R">R</span>]</span><span class="params">(<span name="r">r: ⇒ <span class="extype" name="org.specs2.execute.StandardResults.pending.R">R</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="org.specs2.execute.AsResult">AsResult</span>[<span class="extype" name="org.specs2.execute.StandardResults.pending.R">R</span>]</span>)</span><span class="result">: <span class="extype" name="org.specs2.execute.Pending">Pending</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@pending[R](r:=&gt;R)(implicitevidence$1:org.specs2.execute.AsResult[R]):org.specs2.execute.Pending" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>StandardResults</dd></dl></div>
     </li><li name="au.com.cba.omnia.thermometer.fact.PathFactoids#recordCount" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="recordCount[A](reader:au.com.cba.omnia.thermometer.core.ThermometerRecordReader[A],n:Int):au.com.cba.omnia.thermometer.fact.PathFactoid"></a>
@@ -759,9 +830,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">recordCount</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="reader">reader: <a href="../core/ThermometerRecordReader.html" class="extype" name="au.com.cba.omnia.thermometer.core.ThermometerRecordReader">ThermometerRecordReader</a>[<span class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoids.recordCount.A">A</span>]</span>, <span name="n">n: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="PathFactoid.html" class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoid">PathFactoid</a></span>
+        <span class="name">recordCount</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="reader">reader: <a href="../core/ThermometerRecordReader.html" class="extype" name="au.com.cba.omnia.thermometer.core.ThermometerRecordReader">ThermometerRecordReader</a>[<span class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoids.recordCount.A">A</span>]</span>, <span name="n">n: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="PathFactoid.html" class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoid">PathFactoid</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@recordCount[A](reader:au.com.cba.omnia.thermometer.core.ThermometerRecordReader[A],n:Int):au.com.cba.omnia.thermometer.fact.PathFactoid" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="au.com.cba.omnia.thermometer.fact.PathFactoids#records" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="records[A,B](actualReader:au.com.cba.omnia.thermometer.core.ThermometerRecordReader[A],expectedReader:au.com.cba.omnia.thermometer.core.ThermometerRecordReader[A],expectedPath:org.apache.hadoop.fs.Path,adapter:A=&gt;B):au.com.cba.omnia.thermometer.fact.PathFactoid"></a>
@@ -774,7 +849,11 @@
       <span class="symbol">
         <span class="name">records</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="actualReader">actualReader: <a href="../core/ThermometerRecordReader.html" class="extype" name="au.com.cba.omnia.thermometer.core.ThermometerRecordReader">ThermometerRecordReader</a>[<span class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoids.records.A">A</span>]</span>, <span name="expectedReader">expectedReader: <a href="../core/ThermometerRecordReader.html" class="extype" name="au.com.cba.omnia.thermometer.core.ThermometerRecordReader">ThermometerRecordReader</a>[<span class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoids.records.A">A</span>]</span>, <span name="expectedPath">expectedPath: <span class="extype" name="org.apache.hadoop.fs.Path">Path</span></span>, <span name="adapter">adapter: (<span class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoids.records.A">A</span>) ⇒ <span class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoids.records.B">B</span></span>)</span><span class="result">: <a href="PathFactoid.html" class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoid">PathFactoid</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@records[A,B](actualReader:au.com.cba.omnia.thermometer.core.ThermometerRecordReader[A],expectedReader:au.com.cba.omnia.thermometer.core.ThermometerRecordReader[A],expectedPath:org.apache.hadoop.fs.Path,adapter:A=&gt;B):au.com.cba.omnia.thermometer.fact.PathFactoid" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <p class="shortcomment cmt">Create a factoid for comparing records loaded from thermometer record readers for the fact path and an expected path.</p><div class="fullcomment"><div class="comment cmt"><p>Create a factoid for comparing records loaded from thermometer record readers for the fact path and an expected path.</p><p>This allows you to use different file formats for the actual output of the job and the
 expected output of the job. Eg: Parquet files for the job output, but a readable CSV for the reference data.
 </p></div><dl class="paramcmts block"><dt class="param">actualReader</dt><dd class="cmt"><p>reads records from the fact's path, the paths should be the actual output of the job.
@@ -793,7 +872,11 @@ expected output of the job. Eg: Parquet files for the job output, but a readable
       <span class="symbol">
         <span class="name">records</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="actualReader">actualReader: <a href="../core/ThermometerRecordReader.html" class="extype" name="au.com.cba.omnia.thermometer.core.ThermometerRecordReader">ThermometerRecordReader</a>[<span class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoids.records.A">A</span>]</span>, <span name="expectedReader">expectedReader: <a href="../core/ThermometerRecordReader.html" class="extype" name="au.com.cba.omnia.thermometer.core.ThermometerRecordReader">ThermometerRecordReader</a>[<span class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoids.records.A">A</span>]</span>, <span name="expectedPath">expectedPath: <span class="extype" name="org.apache.hadoop.fs.Path">Path</span></span>)</span><span class="result">: <a href="PathFactoid.html" class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoid">PathFactoid</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@records[A](actualReader:au.com.cba.omnia.thermometer.core.ThermometerRecordReader[A],expectedReader:au.com.cba.omnia.thermometer.core.ThermometerRecordReader[A],expectedPath:org.apache.hadoop.fs.Path):au.com.cba.omnia.thermometer.fact.PathFactoid" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <p class="shortcomment cmt">Create a factoid for comparing records loaded from thermometer record readers for the fact path and an expected path.</p><div class="fullcomment"><div class="comment cmt"><p>Create a factoid for comparing records loaded from thermometer record readers for the fact path and an expected path.</p><p>This allows you to use different file formats for the actual output of the job and the
 expected output of the job. Eg: Parquet files for the job output, but a readable CSV for the reference data.
 </p></div><dl class="paramcmts block"><dt class="param">actualReader</dt><dd class="cmt"><p>reads records from the fact's path, the paths should be the actual output of the job.
@@ -811,7 +894,11 @@ expected output of the job. Eg: Parquet files for the job output, but a readable
       <span class="symbol">
         <span class="name">records</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="reader">reader: <a href="../core/ThermometerRecordReader.html" class="extype" name="au.com.cba.omnia.thermometer.core.ThermometerRecordReader">ThermometerRecordReader</a>[<span class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoids.records.A">A</span>]</span>, <span name="data">data: <span class="extype" name="scala.List">List</span>[<span class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoids.records.A">A</span>]</span>, <span name="adapter">adapter: (<span class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoids.records.A">A</span>) ⇒ <span class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoids.records.B">B</span></span>)</span><span class="result">: <a href="PathFactoid.html" class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoid">PathFactoid</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@records[A,B](reader:au.com.cba.omnia.thermometer.core.ThermometerRecordReader[A],data:List[A],adapter:A=&gt;B):au.com.cba.omnia.thermometer.fact.PathFactoid" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="au.com.cba.omnia.thermometer.fact.PathFactoids#records" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="records[A](reader:au.com.cba.omnia.thermometer.core.ThermometerRecordReader[A],data:List[A]):au.com.cba.omnia.thermometer.fact.PathFactoid"></a>
@@ -824,7 +911,11 @@ expected output of the job. Eg: Parquet files for the job output, but a readable
       <span class="symbol">
         <span class="name">records</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="reader">reader: <a href="../core/ThermometerRecordReader.html" class="extype" name="au.com.cba.omnia.thermometer.core.ThermometerRecordReader">ThermometerRecordReader</a>[<span class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoids.records.A">A</span>]</span>, <span name="data">data: <span class="extype" name="scala.List">List</span>[<span class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoids.records.A">A</span>]</span>)</span><span class="result">: <a href="PathFactoid.html" class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoid">PathFactoid</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@records[A](reader:au.com.cba.omnia.thermometer.core.ThermometerRecordReader[A],data:List[A]):au.com.cba.omnia.thermometer.fact.PathFactoid" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="au.com.cba.omnia.thermometer.fact.PathFactoids#recordsByDirectory" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="recordsByDirectory[A,B](actualReader:au.com.cba.omnia.thermometer.core.ThermometerRecordReader[A],expectedReader:au.com.cba.omnia.thermometer.core.ThermometerRecordReader[A],expectedPath:org.apache.hadoop.fs.Path,adapter:A=&gt;B):au.com.cba.omnia.thermometer.fact.PathFactoid"></a>
@@ -837,7 +928,11 @@ expected output of the job. Eg: Parquet files for the job output, but a readable
       <span class="symbol">
         <span class="name">recordsByDirectory</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="actualReader">actualReader: <a href="../core/ThermometerRecordReader.html" class="extype" name="au.com.cba.omnia.thermometer.core.ThermometerRecordReader">ThermometerRecordReader</a>[<span class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoids.recordsByDirectory.A">A</span>]</span>, <span name="expectedReader">expectedReader: <a href="../core/ThermometerRecordReader.html" class="extype" name="au.com.cba.omnia.thermometer.core.ThermometerRecordReader">ThermometerRecordReader</a>[<span class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoids.recordsByDirectory.A">A</span>]</span>, <span name="expectedPath">expectedPath: <span class="extype" name="org.apache.hadoop.fs.Path">Path</span></span>, <span name="adapter">adapter: (<span class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoids.recordsByDirectory.A">A</span>) ⇒ <span class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoids.recordsByDirectory.B">B</span></span>)</span><span class="result">: <a href="PathFactoid.html" class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoid">PathFactoid</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@recordsByDirectory[A,B](actualReader:au.com.cba.omnia.thermometer.core.ThermometerRecordReader[A],expectedReader:au.com.cba.omnia.thermometer.core.ThermometerRecordReader[A],expectedPath:org.apache.hadoop.fs.Path,adapter:A=&gt;B):au.com.cba.omnia.thermometer.fact.PathFactoid" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <p class="shortcomment cmt">Create a factoid for comparing records loaded from thermometer record readers for the tree of directories beneath
 the fact path and the tree of directories of the expected path.</p><div class="fullcomment"><div class="comment cmt"><p>Create a factoid for comparing records loaded from thermometer record readers for the tree of directories beneath
 the fact path and the tree of directories of the expected path. The directory structure for each root must be the
@@ -858,7 +953,11 @@ same and the records loaded from each subdirectory must be the same.
       <span class="symbol">
         <span class="name">recordsByDirectory</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="actualReader">actualReader: <a href="../core/ThermometerRecordReader.html" class="extype" name="au.com.cba.omnia.thermometer.core.ThermometerRecordReader">ThermometerRecordReader</a>[<span class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoids.recordsByDirectory.A">A</span>]</span>, <span name="expectedReader">expectedReader: <a href="../core/ThermometerRecordReader.html" class="extype" name="au.com.cba.omnia.thermometer.core.ThermometerRecordReader">ThermometerRecordReader</a>[<span class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoids.recordsByDirectory.A">A</span>]</span>, <span name="expectedPath">expectedPath: <span class="extype" name="org.apache.hadoop.fs.Path">Path</span></span>)</span><span class="result">: <a href="PathFactoid.html" class="extype" name="au.com.cba.omnia.thermometer.fact.PathFactoid">PathFactoid</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@recordsByDirectory[A](actualReader:au.com.cba.omnia.thermometer.core.ThermometerRecordReader[A],expectedReader:au.com.cba.omnia.thermometer.core.ThermometerRecordReader[A],expectedPath:org.apache.hadoop.fs.Path):au.com.cba.omnia.thermometer.fact.PathFactoid" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <p class="shortcomment cmt">Create a factoid for comparing records loaded from thermometer record readers for the tree of directories beneath
 the fact path and the tree of directories of the expected path.</p><div class="fullcomment"><div class="comment cmt"><p>Create a factoid for comparing records loaded from thermometer record readers for the tree of directories beneath
 the fact path and the tree of directories of the expected path. The directory structure for each root must be the
@@ -867,8 +966,25 @@ same and the records loaded from each subdirectory must be the same.
        the job. If fact path's are relative it is to the job's working directory.</p></dd><dt class="param">expectedReader</dt><dd class="cmt"><p>reads records from the expectedPath.</p></dd><dt class="param">expectedPath</dt><dd class="cmt"><p>path that points to the root directory of the reference data. If path is relative it is to the
        job's working directory.
 </p></dd></dl></div>
+    </li><li name="org.specs2.matcher.ThrownExpectationsCreation#sandboxMatchResult" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sandboxMatchResult[T](mr:=&gt;org.specs2.matcher.MatchResult[T]):org.specs2.matcher.MatchResult[T]"></a>
+      <a id="sandboxMatchResult[T](⇒MatchResult[T]):MatchResult[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sandboxMatchResult</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="mr">mr: ⇒ <span class="extype" name="org.specs2.matcher.MatchResult">MatchResult</span>[<span class="extype" name="org.specs2.matcher.ThrownExpectationsCreation.sandboxMatchResult.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="org.specs2.matcher.MatchResult">MatchResult</span>[<span class="extype" name="org.specs2.matcher.ThrownExpectationsCreation.sandboxMatchResult.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@sandboxMatchResult[T](mr:=&gt;org.specs2.matcher.MatchResult[T]):org.specs2.matcher.MatchResult[T]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ThrownExpectationsCreation → ExpectationsCreation</dd></dl></div>
     </li><li name="org.specs2.matcher.MatchResultStackTrace#setStacktrace" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="setStacktrace[T&lt;:&lt;?&gt;](m:&lt;?&gt;):org.specs2.matcher.MatchResult[T]"></a>
+      <a id="setStacktrace[T](m:org.specs2.matcher.MatchResult[T]):org.specs2.matcher.MatchResult[T]"></a>
       <a id="setStacktrace[T](MatchResult[T]):MatchResult[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -878,9 +994,13 @@ same and the records loaded from each subdirectory must be the same.
       <span class="symbol">
         <span class="name">setStacktrace</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="m">m: <span class="extype" name="org.specs2.matcher.MatchResult">MatchResult</span>[<span class="extype" name="org.specs2.matcher.MatchResultStackTrace.setStacktrace.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="org.specs2.matcher.MatchResult">MatchResult</span>[<span class="extype" name="org.specs2.matcher.MatchResultStackTrace.setStacktrace.T">T</span>]</span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@setStacktrace[T](m:org.specs2.matcher.MatchResult[T]):org.specs2.matcher.MatchResult[T]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>MatchResultStackTrace</dd></dl></div>
-    </li><li name="org.specs2.matcher.ThrownExpectations#skipped" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.specs2.matcher.ThrownExpectationsCreation#skipped" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="skipped(s:org.specs2.execute.Skipped):org.specs2.execute.Skipped"></a>
       <a id="skipped(Skipped):Skipped"></a>
       <h4 class="signature">
@@ -891,9 +1011,13 @@ same and the records loaded from each subdirectory must be the same.
       <span class="symbol">
         <span class="name">skipped</span><span class="params">(<span name="s">s: <span class="extype" name="org.specs2.execute.Skipped">Skipped</span></span>)</span><span class="result">: <span class="extype" name="org.specs2.execute.Skipped">Skipped</span></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>ThrownExpectations</dd></dl></div>
-    </li><li name="org.specs2.matcher.ThrownExpectations#skipped" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@skipped(s:org.specs2.execute.Skipped):org.specs2.execute.Skipped" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>ThrownExpectationsCreation</dd></dl></div>
+    </li><li name="org.specs2.matcher.ThrownExpectationsCreation#skipped" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="skipped(m:String):org.specs2.execute.Skipped"></a>
       <a id="skipped(String):Skipped"></a>
       <h4 class="signature">
@@ -904,9 +1028,13 @@ same and the records loaded from each subdirectory must be the same.
       <span class="symbol">
         <span class="name">skipped</span><span class="params">(<span name="m">m: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="org.specs2.execute.Skipped">Skipped</span></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ThrownExpectations → StandardResults</dd></dl></div>
-    </li><li name="org.specs2.matcher.ThrownExpectations#skipped" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@skipped(m:String):org.specs2.execute.Skipped" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ThrownExpectationsCreation → StandardResults</dd></dl></div>
+    </li><li name="org.specs2.matcher.ThrownExpectationsCreation#skipped" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="skipped:org.specs2.execute.Skipped"></a>
       <a id="skipped:Skipped"></a>
       <h4 class="signature">
@@ -917,8 +1045,12 @@ same and the records loaded from each subdirectory must be the same.
       <span class="symbol">
         <span class="name">skipped</span><span class="result">: <span class="extype" name="org.specs2.execute.Skipped">Skipped</span></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ThrownExpectations → StandardResults</dd></dl></div>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@skipped:org.specs2.execute.Skipped" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ThrownExpectationsCreation → StandardResults</dd></dl></div>
     </li><li name="org.specs2.execute.StandardResults#skipped" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="skipped[R](r:=&gt;R)(implicitevidence$2:org.specs2.execute.AsResult[R]):org.specs2.execute.Skipped"></a>
       <a id="skipped[R](⇒R)(AsResult[R]):Skipped"></a>
@@ -930,9 +1062,13 @@ same and the records loaded from each subdirectory must be the same.
       <span class="symbol">
         <span class="name">skipped</span><span class="tparams">[<span name="R">R</span>]</span><span class="params">(<span name="r">r: ⇒ <span class="extype" name="org.specs2.execute.StandardResults.skipped.R">R</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="org.specs2.execute.AsResult">AsResult</span>[<span class="extype" name="org.specs2.execute.StandardResults.skipped.R">R</span>]</span>)</span><span class="result">: <span class="extype" name="org.specs2.execute.Skipped">Skipped</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@skipped[R](r:=&gt;R)(implicitevidence$2:org.specs2.execute.AsResult[R]):org.specs2.execute.Skipped" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>StandardResults</dd></dl></div>
-    </li><li name="org.specs2.matcher.ThrownExpectations#success" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.specs2.matcher.ThrownExpectationsCreation#success" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="success(m:String):org.specs2.execute.Success"></a>
       <a id="success(String):Success"></a>
       <h4 class="signature">
@@ -943,9 +1079,13 @@ same and the records loaded from each subdirectory must be the same.
       <span class="symbol">
         <span class="name">success</span><span class="params">(<span name="m">m: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="org.specs2.execute.Success">Success</span></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>ThrownExpectations</dd></dl></div>
-    </li><li name="org.specs2.matcher.ThrownExpectations#success" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@success(m:String):org.specs2.execute.Success" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>ThrownExpectationsCreation</dd></dl></div>
+    </li><li name="org.specs2.matcher.ThrownExpectationsCreation#success" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="success:org.specs2.execute.Success"></a>
       <a id="success:Success"></a>
       <h4 class="signature">
@@ -956,8 +1096,12 @@ same and the records loaded from each subdirectory must be the same.
       <span class="symbol">
         <span class="name">success</span><span class="result">: <span class="extype" name="org.specs2.execute.Success">Success</span></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ThrownExpectations → StandardResults</dd></dl></div>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@success:org.specs2.execute.Success" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ThrownExpectationsCreation → StandardResults</dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -969,7 +1113,11 @@ same and the records loaded from each subdirectory must be the same.
       <span class="symbol">
         <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
@@ -982,9 +1130,13 @@ same and the records loaded from each subdirectory must be the same.
       <span class="symbol">
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@toString():String" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="org.specs2.matcher.ThrownExpectations#todo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.specs2.matcher.ThrownExpectationsCreation#todo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="todo:org.specs2.execute.Pending"></a>
       <a id="todo:Pending"></a>
       <h4 class="signature">
@@ -995,8 +1147,12 @@ same and the records loaded from each subdirectory must be the same.
       <span class="symbol">
         <span class="name">todo</span><span class="result">: <span class="extype" name="org.specs2.execute.Pending">Pending</span></span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ThrownExpectations → StandardResults</dd></dl></div>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@todo:org.specs2.execute.Pending" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ThrownExpectationsCreation → StandardResults</dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -1006,9 +1162,13 @@ same and the records loaded from each subdirectory must be the same.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@wait():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -1025,9 +1185,13 @@ same and the records loaded from each subdirectory must be the same.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -1044,9 +1208,13 @@ same and the records loaded from each subdirectory must be the same.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -1065,7 +1233,11 @@ same and the records loaded from each subdirectory must be the same.
       <span class="symbol">
         <span class="name">wontdo</span><span class="result">: <span class="extype" name="org.specs2.execute.Success">Success</span></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.fact.PathFactoids$@wontdo:org.specs2.execute.Success" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>StandardResults</dd></dl></div>
     </li></ol>
             </div>
@@ -1078,20 +1250,20 @@ same and the records loaded from each subdirectory must be the same.
         <div id="inheritedMembers">
         <div class="parent" name="org.specs2.matcher.ThrownExpectations">
               <h3>Inherited from <span class="extype" name="org.specs2.matcher.ThrownExpectations">ThrownExpectations</span></h3>
+            </div><div class="parent" name="org.specs2.matcher.ThrownExpectationsCreation">
+              <h3>Inherited from <span class="extype" name="org.specs2.matcher.ThrownExpectationsCreation">ThrownExpectationsCreation</span></h3>
             </div><div class="parent" name="org.specs2.matcher.StandardMatchResults">
               <h3>Inherited from <span class="extype" name="org.specs2.matcher.StandardMatchResults">StandardMatchResults</span></h3>
             </div><div class="parent" name="org.specs2.execute.StandardResults">
               <h3>Inherited from <span class="extype" name="org.specs2.execute.StandardResults">StandardResults</span></h3>
-            </div><div class="parent" name="org.specs2.matcher.Expectations">
-              <h3>Inherited from <span class="extype" name="org.specs2.matcher.Expectations">Expectations</span></h3>
+            </div><div class="parent" name="org.specs2.matcher.ExpectationsCreation">
+              <h3>Inherited from <span class="extype" name="org.specs2.matcher.ExpectationsCreation">ExpectationsCreation</span></h3>
             </div><div class="parent" name="org.specs2.matcher.MatchResultStackTrace">
               <h3>Inherited from <span class="extype" name="org.specs2.matcher.MatchResultStackTrace">MatchResultStackTrace</span></h3>
-            </div><div class="parent" name="org.specs2.matcher.CanBeEqual">
-              <h3>Inherited from <span class="extype" name="org.specs2.matcher.CanBeEqual">CanBeEqual</span></h3>
             </div><div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
             </div>
         
         </div>
@@ -1108,6 +1280,7 @@ same and the records loaded from each subdirectory must be the same.
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../../../lib/template.js"></script>
+
+
     </body>
       </html>

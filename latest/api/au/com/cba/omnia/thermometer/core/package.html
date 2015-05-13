@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html >
 <html>
         <head>
           <title>core - au.com.cba.omnia.thermometer.core</title>
@@ -9,6 +8,11 @@
           
       <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/tools.tooltip.js"></script>
+      
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../../../index.html';
@@ -26,7 +30,11 @@
       <div id="definition">
         <img src="../../../../../../lib/package_big.png" />
         <p id="owner"><a href="../../../../../package.html" class="extype" name="au">au</a>.<a href="../../../../package.html" class="extype" name="au.com">com</a>.<a href="../../../package.html" class="extype" name="au.com.cba">cba</a>.<a href="../../package.html" class="extype" name="au.com.cba.omnia">omnia</a>.<a href="../package.html" class="extype" name="au.com.cba.omnia.thermometer">thermometer</a></p>
-        <h1>core</h1>
+        <h1>core</h1><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.core.package" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       </div>
 
       <h4 id="signature" class="signature">
@@ -67,12 +75,16 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="ThermometerRecordReader.html"><span class="name">ThermometerRecordReader</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="read">read: (<span class="extype" name="org.apache.hadoop.conf.Configuration">Configuration</span>, <span class="extype" name="org.apache.hadoop.fs.Path">Path</span>) ⇒ <span class="extype" name="scalaz.effect.IO">IO</span>[<span class="extype" name="scala.List">List</span>[<span class="extype" name="au.com.cba.omnia.thermometer.core.ThermometerRecordReader.A">A</span>]]</span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+        <a href="ThermometerRecordReader.html"><span class="name">ThermometerRecordReader</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="read">read: (<span class="extype" name="org.apache.hadoop.conf.Configuration">Configuration</span>, <span class="extype" name="org.apache.hadoop.fs.Path">Path</span>) ⇒ <span class="extype" name="scalaz.effect.IO">IO</span>[<span class="extype" name="scala.List">List</span>[<span class="extype" name="au.com.cba.omnia.thermometer.core.ThermometerRecordReader.A">A</span>]]</span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.core.package@ThermometerRecordReader[A]extendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="au.com.cba.omnia.thermometer.core.ThermometerSpec" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="ThermometerSpecextendsSpecificationwithTerminationMatcherswithThrownExpectationswithScalaCheckwithScaldingSupportwithExecutionSupport"></a>
+      <a id="ThermometerSpecextendsSpecificationwithThrownExpectationswithBeforeAfterEachwithScalaCheckwithExecutionSupport"></a>
       <a id="ThermometerSpec:ThermometerSpec"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -80,10 +92,14 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="ThermometerSpec.html"><span class="name">ThermometerSpec</span></a><span class="result"> extends <span class="extype" name="org.specs2.Specification">Specification</span> with <span class="extype" name="org.specs2.matcher.TerminationMatchers">TerminationMatchers</span> with <span class="extype" name="org.specs2.matcher.ThrownExpectations">ThrownExpectations</span> with <span class="extype" name="org.specs2.ScalaCheck">ScalaCheck</span> with <a href="../tools/ScaldingSupport.html" class="extype" name="au.com.cba.omnia.thermometer.tools.ScaldingSupport">ScaldingSupport</a> with <a href="../tools/ExecutionSupport.html" class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport">ExecutionSupport</a></span>
+        <a href="ThermometerSpec.html"><span class="name">ThermometerSpec</span></a><span class="result"> extends <span class="extype" name="org.specs2.Specification">Specification</span> with <span class="extype" name="org.specs2.matcher.ThrownExpectations">ThrownExpectations</span> with <span class="extype" name="org.specs2.specification.BeforeAfterEach">BeforeAfterEach</span> with <span class="extype" name="org.specs2.ScalaCheck">ScalaCheck</span> with <a href="../tools/ExecutionSupport.html" class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport">ExecutionSupport</a></span>
       </span>
-      </h4>
-      <p class="comment cmt">Adds functionality that makes testing scalding flows and jobs nicer.</p>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.core.package@ThermometerSpecextendsSpecificationwithThrownExpectationswithBeforeAfterEachwithScalaCheckwithExecutionSupport" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Adds functionality that makes testing Scalding nicer.</p>
     </li></ol>
             </div>
 
@@ -102,7 +118,11 @@
       <span class="symbol">
         <a href="Thermometer$.html"><span class="name">Thermometer</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.core.package@Thermometer" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li><li name="au.com.cba.omnia.thermometer.core.ThermometerSource" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ThermometerSource"></a>
@@ -115,7 +135,11 @@
       <span class="symbol">
         <a href="ThermometerSource$.html"><span class="name">ThermometerSource</span></a>
       </span>
-      </h4>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.core.package@ThermometerSource" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" />
+      </a>
+    </span>
       
     </li></ol>
             </div>
@@ -142,6 +166,7 @@
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../../../lib/template.js"></script>
+
+
     </body>
       </html>
