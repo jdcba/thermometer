@@ -17,7 +17,7 @@ package au.com.cba.omnia.thermometer.fact
 import org.apache.hadoop.fs.{FileSystem, Path, RemoteIterator}
 
 import org.specs2.execute.Result
-import org.specs2.matcher.ThrownExpectations
+import org.specs2.matcher.MustThrownExpectations
 import org.specs2.matcher.MustMatchers._
 
 import scalaz._, Scalaz._
@@ -34,7 +34,7 @@ case class PathFact(path: Path) {
 
 case class PathFactoid(run: (Context, Path) => Result)
 
-object PathFactoids extends ThrownExpectations {
+object PathFactoids extends MustThrownExpectations {
   def conditional(cond: (Context, Path) => Boolean)(message: Path => String): PathFactoid =
     PathFactoid((context, path) => if (cond(context, path)) ok.toResult else failure(message(path)))
 
