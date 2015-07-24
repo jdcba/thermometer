@@ -44,4 +44,12 @@
         <name>hive.rpc.query.plan</name>
         <value>true</value>
     </property> 
+    <property>
+        <name>hive.auto.convert.join</name>
+        <value>false</value>
+    </property>
+    <property>
+        <name>hive.auto.convert.join.noconditionaltask</name>
+        <value>false</value>
+    </property>
 </configuration>
