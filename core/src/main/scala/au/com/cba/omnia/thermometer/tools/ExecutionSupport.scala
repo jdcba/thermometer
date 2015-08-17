@@ -34,7 +34,7 @@ import au.com.cba.omnia.thermometer.fact.Fact
 /** Adds testing support for scalding execution monad by setting up a test `Config` and `Mode`.*/
 trait ExecutionSupport extends FieldConversions with HadoopSupport { self: Specification =>
   /** Executes the provided execution with an optional map of arguments. */
-  def execute[T](execution: Execution[T], args: Map[String, List[String]] = Map.empty): Try[T] = {
+  def execute[T](execution: Execution[T], args: Map[String, List[String]] = Map.empty, extraConfig: Config = Config.empty): Try[T] = {
     val log = LogManager.getLogger(getClass)
     log.info("")
     log.info("")
@@ -45,8 +45,10 @@ trait ExecutionSupport extends FieldConversions with HadoopSupport { self: Speci
     val mode   = Hdfs(false, jobConf)
     val a      = Mode.putMode(mode, new Args(args + (("hdfs", List.empty))))
     val config =
-      Config.hadoopWithDefaults(jobConf)
+      Config
+        .hadoopWithDefaults(jobConf)
         .setArgs(a)
+        .++(extraConfig)
 
     Executions.runExecution[T](config, mode, execution)
   }
@@ -55,10 +57,10 @@ trait ExecutionSupport extends FieldConversions with HadoopSupport { self: Speci
     * Checks that the provided execution executed successfully.
     * 
     * It ignores the result of the execution.
-    * Takes an optional map of arguments.
+    * Takes an optional map of arguments and any extra configuration parameters.
     */
-  def executesOk(execution: Execution[_], args: Map[String, List[String]] = Map.empty): Result = {
-    execute(execution, args) match {
+  def executesOk(execution: Execution[_], args: Map[String, List[String]] = Map.empty, extraConfig: Config = Config.empty): Result = {
+    execute(execution, args, extraConfig) match {
       case Success(x) => SpecsSuccess()
       case Failure(t) => {
         val stackTrace = Errors.renderWithStack(t)
@@ -74,8 +76,8 @@ trait ExecutionSupport extends FieldConversions with HadoopSupport { self: Speci
     * 
     * Takes an optional map of arguments.
     */
-  def executesSuccessfully[T](execution: Execution[T], args: Map[String, List[String]] = Map.empty): T = {
-    execute(execution, args) match {
+  def executesSuccessfully[T](execution: Execution[T], args: Map[String, List[String]] = Map.empty, extraConfig: Config = Config.empty): T = {
+    execute(execution, args, extraConfig) match {
       case Success(x) => x
       case Failure(t) =>
         throw FailureException(SpecsFailure(s"Execution failed: ${t.toString}", "", t.getStackTrace.toList))

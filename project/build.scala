@@ -49,9 +49,13 @@ object build extends Build {
       standardSettings
         ++ uniform.project("thermometer", "au.com.cba.omnia.thermometer")
         ++ Seq(
-          libraryDependencies ++=
-            depend.hadoopClasspath ++ depend.hadoop() ++ depend.scalding() ++ depend.testing(configuration = "compile")
-        )
+             libraryDependencies ++=
+                  depend.hadoopClasspath
+               ++ depend.hadoop()
+               ++ depend.scalding()
+               ++ depend.testing(configuration = "compile")
+               ++ depend.time().map(_ % "test")
+           )
   )
 
   lazy val hive = Project(
