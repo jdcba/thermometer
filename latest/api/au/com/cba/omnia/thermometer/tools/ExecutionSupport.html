@@ -49,7 +49,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Adds testing support for scalding execution monad by setting up a test <code>Config</code> and <code>Mode</code>.</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport">ExecutionSupport</a> with <span class="extype" name="org.specs2.Specification">Specification</span></dd><dt>Source</dt><dd><a href="https://github.com/CommBank/thermometer/tree/Dirty(6a77919aecb2fc1e65cfd4d5920caf49798598e5)//core/src/main/scala/au/com/cba/omnia/thermometer/tools/ExecutionSupport.scala" target="_blank">ExecutionSupport.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Adds testing support for scalding execution monad by setting up a test <code>Config</code> and <code>Mode</code>.</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport">ExecutionSupport</a> with <span class="extype" name="org.specs2.Specification">Specification</span></dd><dt>Source</dt><dd><a href="https://github.com/CommBank/thermometer/tree/Dirty(f86910ce0e7fa3dbb7c92b46b4670df4e331b47a)//core/src/main/scala/au/com/cba/omnia/thermometer/tools/ExecutionSupport.scala" target="_blank">ExecutionSupport.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a href="HadoopSupport.html" class="extype" name="au.com.cba.omnia.thermometer.tools.HadoopSupport">HadoopSupport</a>, <span class="extype" name="com.twitter.scalding.FieldConversions">FieldConversions</span>, <span class="extype" name="com.twitter.scalding.LowPriorityFieldConversions">LowPriorityFieldConversions</span>, <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div><div class="toggleContainer block">
@@ -342,60 +342,80 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="au.com.cba.omnia.thermometer.tools.ExecutionSupport#execute" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="execute[T](execution:com.twitter.scalding.Execution[T],args:Map[String,List[String]]):scala.util.Try[T]"></a>
-      <a id="execute[T](Execution[T],Map[String,List[String]]):Try[T]"></a>
+    </li><li name="au.com.cba.omnia.thermometer.tools.ExecutionSupport#execute" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="execute[T](execution:com.twitter.scalding.Execution[T],args:Map[String,List[String]],extraConfig:com.twitter.scalding.Config):scala.util.Try[T]"></a>
+      <a id="execute[T](Execution[T],Map[String,List[String]],Config):Try[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">execute</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="execution">execution: <span class="extype" name="com.twitter.scalding.Execution">Execution</span>[<span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.execute.T">T</span>]</span>, <span name="args">args: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]] = <span class="symbol">Map.empty</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.util.Try" class="extype" target="_top">Try</a>[<span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.execute.T">T</span>]</span>
+        <span class="name">execute</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="execution">execution: <span class="extype" name="com.twitter.scalding.Execution">Execution</span>[<span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.execute.T">T</span>]</span>, <span name="args">args: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]] = <span class="symbol">Map.empty</span></span>, <span name="extraConfig">extraConfig: <span class="extype" name="com.twitter.scalding.Config">Config</span> = <span class="symbol">Config.empty</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.util.Try" class="extype" target="_top">Try</a>[<span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.execute.T">T</span>]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@execute[T](execution:com.twitter.scalding.Execution[T],args:Map[String,List[String]]):scala.util.Try[T]" title="Permalink" target="_top">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@execute[T](execution:com.twitter.scalding.Execution[T],args:Map[String,List[String]],extraConfig:com.twitter.scalding.Config):scala.util.Try[T]" title="Permalink" target="_top">
         <img src="../../../../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Executes the provided execution with an optional map of arguments.</p>
+      <p class="shortcomment cmt">Executes the provided execution.</p><div class="fullcomment"><div class="comment cmt"><p>Executes the provided execution.</p><p>The provided <code>Execution</code> is run in HDFS mode, using supplied arguments and optional additional
+configuration. The method returns a <code>Try[T]</code> containing the result after waiting for the
+execution to finish.</p><p><code>extraConfig</code> should be used with caution since it can potentially override important
+parameters of the <code>Execution</code>, such as the mode and arguments. A useful purpose for
+<code>extraConfig</code> is to add custom serialization for the execution.
+</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>type of the execution (the type of its result)</p></dd><dt class="param">execution</dt><dd class="cmt"><p>execution to execute</p></dd><dt class="param">args</dt><dd class="cmt"><p>arguments passed to <code>Execution.run</code> (placed in the Scalding <code>Args</code>
+       variable of the <code>Config</code>)</p></dd><dt class="param">extraConfig</dt><dd class="cmt"><p>extra configuration passed to <code>Execution.run</code> (appended to the
+       <code>Config</code> that would otherwise be used using the <code>++</code> method)</p></dd><dt>returns</dt><dd class="cmt"><p><code>Try[T]</code> containing the result of waiting for the execution to complete
+</p></dd></dl></div>
     </li><li name="au.com.cba.omnia.thermometer.tools.ExecutionSupport#executesOk" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="executesOk(execution:com.twitter.scalding.Execution[_],args:Map[String,List[String]]):org.specs2.execute.Result"></a>
-      <a id="executesOk(Execution[_],Map[String,List[String]]):Result"></a>
+      <a id="executesOk(execution:com.twitter.scalding.Execution[_],args:Map[String,List[String]],extraConfig:com.twitter.scalding.Config):org.specs2.execute.Result"></a>
+      <a id="executesOk(Execution[_],Map[String,List[String]],Config):Result"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">executesOk</span><span class="params">(<span name="execution">execution: <span class="extype" name="com.twitter.scalding.Execution">Execution</span>[_]</span>, <span name="args">args: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]] = <span class="symbol">Map.empty</span></span>)</span><span class="result">: <span class="extype" name="org.specs2.execute.Result">Result</span></span>
+        <span class="name">executesOk</span><span class="params">(<span name="execution">execution: <span class="extype" name="com.twitter.scalding.Execution">Execution</span>[_]</span>, <span name="args">args: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]] = <span class="symbol">Map.empty</span></span>, <span name="extraConfig">extraConfig: <span class="extype" name="com.twitter.scalding.Config">Config</span> = <span class="symbol">Config.empty</span></span>)</span><span class="result">: <span class="extype" name="org.specs2.execute.Result">Result</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@executesOk(execution:com.twitter.scalding.Execution[_],args:Map[String,List[String]]):org.specs2.execute.Result" title="Permalink" target="_top">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@executesOk(execution:com.twitter.scalding.Execution[_],args:Map[String,List[String]],extraConfig:com.twitter.scalding.Config):org.specs2.execute.Result" title="Permalink" target="_top">
         <img src="../../../../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Checks that the provided execution executed successfully.</p><div class="fullcomment"><div class="comment cmt"><p>Checks that the provided execution executed successfully.</p><p>It ignores the result of the execution.
-Takes an optional map of arguments.
-</p></div></div>
+      <p class="shortcomment cmt">Checks that the provided execution executed successfully.</p><div class="fullcomment"><div class="comment cmt"><p>Checks that the provided execution executed successfully.</p><p>The value produced by the execution is ignored.</p><p>The provided <code>Execution</code> is run in HDFS mode, using supplied arguments and optional additional
+configuration. Any return value from the execution is discarded.</p><p><code>extraConfig</code> should be used with caution since it can potentially override important
+parameters of the <code>Execution</code>, such as the mode and arguments. A useful purpose for
+<code>extraConfig</code> is to add custom serialization for the execution.
+</p></div><dl class="paramcmts block"><dt class="param">execution</dt><dd class="cmt"><p>execution to execute</p></dd><dt class="param">args</dt><dd class="cmt"><p>arguments passed to <code>Execution.run</code> (placed in the Scalding <code>Args</code>
+       variable of the <code>Config</code>)</p></dd><dt class="param">extraConfig</dt><dd class="cmt"><p>extra configuration passed to <code>Execution.run</code> (appended to the
+       <code>Config</code> that would otherwise be used using the <code>++</code> method)</p></dd><dt>returns</dt><dd class="cmt"><p><code>Result</code> of running the execution (discarding the value produced)
+</p></dd></dl></div>
     </li><li name="au.com.cba.omnia.thermometer.tools.ExecutionSupport#executesSuccessfully" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="executesSuccessfully[T](execution:com.twitter.scalding.Execution[T],args:Map[String,List[String]]):T"></a>
-      <a id="executesSuccessfully[T](Execution[T],Map[String,List[String]]):T"></a>
+      <a id="executesSuccessfully[T](execution:com.twitter.scalding.Execution[T],args:Map[String,List[String]],extraConfig:com.twitter.scalding.Config):T"></a>
+      <a id="executesSuccessfully[T](Execution[T],Map[String,List[String]],Config):T"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">executesSuccessfully</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="execution">execution: <span class="extype" name="com.twitter.scalding.Execution">Execution</span>[<span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.executesSuccessfully.T">T</span>]</span>, <span name="args">args: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]] = <span class="symbol">Map.empty</span></span>)</span><span class="result">: <span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.executesSuccessfully.T">T</span></span>
+        <span class="name">executesSuccessfully</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="execution">execution: <span class="extype" name="com.twitter.scalding.Execution">Execution</span>[<span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.executesSuccessfully.T">T</span>]</span>, <span name="args">args: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]] = <span class="symbol">Map.empty</span></span>, <span name="extraConfig">extraConfig: <span class="extype" name="com.twitter.scalding.Config">Config</span> = <span class="symbol">Config.empty</span></span>)</span><span class="result">: <span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.executesSuccessfully.T">T</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@executesSuccessfully[T](execution:com.twitter.scalding.Execution[T],args:Map[String,List[String]]):T" title="Permalink" target="_top">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@executesSuccessfully[T](execution:com.twitter.scalding.Execution[T],args:Map[String,List[String]],extraConfig:com.twitter.scalding.Config):T" title="Permalink" target="_top">
         <img src="../../../../../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Checks that the provided execution executed successfully and returns the result</p><div class="fullcomment"><div class="comment cmt"><p>Checks that the provided execution executed successfully and returns the result</p><p>Takes an optional map of arguments.
-</p></div></div>
+      <p class="shortcomment cmt">Checks that the provided execution executed successfully and returns the value produced.</p><div class="fullcomment"><div class="comment cmt"><p>Checks that the provided execution executed successfully and returns the value produced.</p><p>The provided <code>Execution</code> is run in HDFS mode, using supplied arguments and optional additional
+configuration. The method returns the value of the execution if it was successful, and throws a
+<code>FailureException</code> if it faield.</p><p><code>extraConfig</code> should be used with caution since it can potentially override important
+parameters of the <code>Execution</code>, such as the mode and arguments. A useful purpose for
+<code>extraConfig</code> is to add custom serialization for the execution.
+</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>type of the execution (the type of its result value)</p></dd><dt class="param">execution</dt><dd class="cmt"><p>execution to execute</p></dd><dt class="param">args</dt><dd class="cmt"><p>arguments passed to <code>Execution.run</code> (placed in the Scalding <code>Args</code>
+       variable of the <code>Config</code>)</p></dd><dt class="param">extraConfig</dt><dd class="cmt"><p>extra configuration passed to <code>Execution.run</code> (appended to the
+       <code>Config</code> that would otherwise be used using the <code>++</code> method)</p></dd><dt>returns</dt><dd class="cmt"><p>value produced by the execution
+</p></dd></dl></div>
     </li><li name="au.com.cba.omnia.thermometer.tools.ExecutionSupport#expectations" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="expectations(f:au.com.cba.omnia.thermometer.context.Context=&gt;org.specs2.execute.Result):org.specs2.execute.Result"></a>
       <a id="expectations((Context)⇒Result):Result"></a>
