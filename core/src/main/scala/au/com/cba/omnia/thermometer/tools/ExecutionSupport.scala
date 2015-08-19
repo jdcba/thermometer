@@ -33,8 +33,30 @@ import au.com.cba.omnia.thermometer.fact.Fact
 
 /** Adds testing support for scalding execution monad by setting up a test `Config` and `Mode`.*/
 trait ExecutionSupport extends FieldConversions with HadoopSupport { self: Specification =>
-  /** Executes the provided execution with an optional map of arguments. */
-  def execute[T](execution: Execution[T], args: Map[String, List[String]] = Map.empty, extraConfig: Config = Config.empty): Try[T] = {
+  /** 
+   * Executes the provided execution.
+   * 
+   * The provided `Execution` is run in HDFS mode, using supplied arguments and optional additional
+   * configuration. The method returns a `Try[T]` containing the result after waiting for the
+   * execution to finish.
+   * 
+   * `extraConfig` should be used with caution since it can potentially override important
+   * parameters of the `Execution`, such as the mode and arguments. A useful purpose for
+   * `extraConfig` is to add custom serialization for the execution.
+   * 
+   * @tparam T type of the execution (the type of its result)
+   * @param execution execution to execute
+   * @param args arguments passed to `Execution.run` (placed in the Scalding `Args` 
+   *        variable of the `Config`)
+   * @param extraConfig extra configuration passed to `Execution.run` (appended to the
+   *        `Config` that would otherwise be used using the `++` method)
+   * @return `Try[T]` containing the result of waiting for the execution to complete
+   */
+  def execute[T](
+    execution: Execution[T],
+    args: Map[String, List[String]] = Map.empty,
+    extraConfig: Config = Config.empty
+  ): Try[T] = {
     val log = LogManager.getLogger(getClass)
     log.info("")
     log.info("")
@@ -54,12 +76,30 @@ trait ExecutionSupport extends FieldConversions with HadoopSupport { self: Speci
   }
 
   /**
-    * Checks that the provided execution executed successfully.
-    * 
-    * It ignores the result of the execution.
-    * Takes an optional map of arguments and any extra configuration parameters.
-    */
-  def executesOk(execution: Execution[_], args: Map[String, List[String]] = Map.empty, extraConfig: Config = Config.empty): Result = {
+   * Checks that the provided execution executed successfully.
+   * 
+   * The value produced by the execution is ignored.
+   * 
+   * The provided `Execution` is run in HDFS mode, using supplied arguments and optional additional
+   * configuration. Any return value from the execution is discarded.
+   * 
+   * `extraConfig` should be used with caution since it can potentially override important
+   * parameters of the `Execution`, such as the mode and arguments. A useful purpose for
+   * `extraConfig` is to add custom serialization for the execution.
+   * 
+   * @tparam T type of the execution (the type of its result)
+   * @param execution execution to execute
+   * @param args arguments passed to `Execution.run` (placed in the Scalding `Args` 
+   *        variable of the `Config`)
+   * @param extraConfig extra configuration passed to `Execution.run` (appended to the
+   *        `Config` that would otherwise be used using the `++` method)
+   * @return `Result` of running the execution (discarding the value produced)
+   */
+  def executesOk(
+    execution: Execution[_],
+    args: Map[String, List[String]] = Map.empty,
+    extraConfig: Config = Config.empty
+  ): Result = {
     execute(execution, args, extraConfig) match {
       case Success(x) => SpecsSuccess()
       case Failure(t) => {
@@ -72,11 +112,29 @@ trait ExecutionSupport extends FieldConversions with HadoopSupport { self: Speci
   }
 
   /**
-    * Checks that the provided execution executed successfully and returns the result
-    * 
-    * Takes an optional map of arguments.
-    */
-  def executesSuccessfully[T](execution: Execution[T], args: Map[String, List[String]] = Map.empty, extraConfig: Config = Config.empty): T = {
+   * Checks that the provided execution executed successfully and returns the value produced.
+   * 
+   * The provided `Execution` is run in HDFS mode, using supplied arguments and optional additional
+   * configuration. The method returns the value of the execution if it was successful, and throws a
+   * `FailureException` if it faield.
+   * 
+   * `extraConfig` should be used with caution since it can potentially override important
+   * parameters of the `Execution`, such as the mode and arguments. A useful purpose for
+   * `extraConfig` is to add custom serialization for the execution.
+   * 
+   * @tparam T type of the execution (the type of its result value)
+   * @param execution execution to execute
+   * @param args arguments passed to `Execution.run` (placed in the Scalding `Args` 
+   *        variable of the `Config`)
+   * @param extraConfig extra configuration passed to `Execution.run` (appended to the
+   *        `Config` that would otherwise be used using the `++` method)
+   * @return value produced by the execution
+   */
+  def executesSuccessfully[T](
+    execution: Execution[T],
+    args: Map[String, List[String]] = Map.empty,
+    extraConfig: Config = Config.empty
+  ): T = {
     execute(execution, args, extraConfig) match {
       case Success(x) => x
       case Failure(t) =>
