@@ -56,8 +56,9 @@ Demonstration of an execution-based ThermometerSpec that relies on a custom Kryo
 
     // pass the register of extra serialziers to the execution job
     val extraConfig =
-      Config.empty ++
-      Map(ChillConfiguredInstantiator.KEY -> classOf[CustomSerializerRegistration].getName)
+      Config
+        .empty
+        .setSerialization(Right(classOf[CustomSerializerRegistration]))
 
     // test pipe of DateTime objects, which can't be serialized properly without a custom
     // serializer
