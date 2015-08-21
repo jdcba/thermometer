@@ -154,8 +154,11 @@ object PathFactoids extends MustThrownExpectations {
    *        job's working directory.
    * @param adapter function adapts each of record from the expected as well as actual record set before the records
    *        are compared. If not specified, the identity function is used.
+   * @param fileGlob pattern which helps to specify the files to be considered while comparison. The pattern should be
+   *        the one supported for globStatus in org.apache.hadoop.fs.FileSystem. By default the files starting with `_`
+   *        will be ignored.
    */
-  def recordsByDirectory[A, B](actualReader: ThermometerRecordReader[A], expectedReader: ThermometerRecordReader[A], expectedPath: Path, adapter: A => B): PathFactoid = {
+  def recordsByDirectory[A, B](actualReader: ThermometerRecordReader[A], expectedReader: ThermometerRecordReader[A], expectedPath: Path, adapter: A => B, fileGlob: String = "[^_]*"): PathFactoid = {
     PathFactoid((context, actualPath) => {
       val system: FileSystem = FileSystem.get(context.config)
 
@@ -167,7 +170,7 @@ object PathFactoids extends MustThrownExpectations {
       def getRelativeSubdirs(p: Path) = {
         val absoluteRoot = system.resolvePath(p).toString()
         val pattern = s"${absoluteRoot}/(.*)".r
-        
+
         RemoteIter(system.listFiles(p, true))
           .filterNot(_.isDirectory)
           .map(_.getPath.getParent().toString)
@@ -186,7 +189,8 @@ object PathFactoids extends MustThrownExpectations {
         failure(s"""No subdirectories found beneath Path <${actualPath}>.""")
       } else {
         actualSubdirs.map(subdir => {
-          records(actualReader, expectedReader, expectedPath </> subdir </> "*", adapter).run(context, actualPath </> subdir </> "*")
+          /* Filtering out the files which starts with _ similar to Hadoop framework */
+          records(actualReader, expectedReader, expectedPath </> subdir </> fileGlob, adapter).run(context, actualPath </> subdir </> fileGlob)
         }).reduce((a, b) => if (a.isFailure) a else b)
       }
     })
