@@ -34,6 +34,7 @@ Demonstration of ThermometerSpec using Execution monad
   Verify output using explicit expectations $usingExpectations
   Verify output using fact api              $usingFacts
   Verify output against environment         $environment
+  Verify exception against failure pattern  $usingFailurePattern
 
 """
   val purchaseDate = new Date().toString
@@ -77,7 +78,7 @@ Demonstration of ThermometerSpec using Execution monad
   })
 
   val execution2: Execution[(Unit, Unit)] = {
-    val pipe = IterablePipe[Car](data).map(c =>  (c.model, c.year, c.purchaseDate))
+    val pipe = IterablePipe[Car](data).map(c => (c.model, c.year, c.purchaseDate))
     pipe.writeExecution(TypedPsv[(String, Int, String)]("output/cars/1"))
       .zip(pipe.writeExecution(TypedPsv[(String, Int, String)]("output/cars/2")))
   }
@@ -91,4 +92,35 @@ Demonstration of ThermometerSpec using Execution monad
       })
     )
   }
+
+  val psvReader3 = ThermometerRecordReader[Car]((conf, path) => IO {
+    new Context(conf).lines(path).map(line => {
+      val parts = line.split('|')
+      Car(parts(0).toInt, parts(1).toInt, parts(2).toInt)
+    })
+  })
+
+  case class TestFailException(msg: String, exn: Throwable) extends Exception("TestFailException")
+
+  val executionFail: Execution[Unit] = {
+    def convertToInt(s: String) =
+
+
+    val pipe = IterablePipe[Car](data).map(c => (c.model.toInt, c.year, c.purchaseDate.toInt))
+    pipe.writeExecution(TypedPsv[(Int, Int, Int)]("output/cars/3"))
+      .recoverWith { case throwable =>
+        Execution.from(throw TestFailException("in executionFail", throwable))
+      }
+
+  }
+
+  def usingFailurePattern = withEnvironment(path(getClass.getResource("env").toString)) {
+    executesWithFailurePattern(executionFail, {
+      case TestFailException("in executionFail", _) => ok
+
+//        (x: cascading.flow.FlowException) => { println(x); ok }
+          //For input string: "Canyonero"x => { println(x); ok }
+    })
+   }
+
 }
