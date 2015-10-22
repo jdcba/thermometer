@@ -32,8 +32,8 @@ import au.com.cba.omnia.thermometer.context.Context
 import au.com.cba.omnia.thermometer.fact.Fact
 
 /** Adds testing support for scalding execution monad by setting up a test `Config` and `Mode`.*/
-trait ExecutionSupport extends FieldConversions with HadoopSupport { self: Specification =>
-  /** 
+trait ExecutionSupport extends HadoopSupport { self: Specification =>
+  /**
    * Executes the provided execution.
    * 
    * The provided `Execution` is run in HDFS mode, using supplied arguments and optional additional
