@@ -45,13 +45,13 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">ExecutionSupport</span><span class="result"> extends <span class="extype" name="com.twitter.scalding.FieldConversions">FieldConversions</span> with <a href="HadoopSupport.html" class="extype" name="au.com.cba.omnia.thermometer.tools.HadoopSupport">HadoopSupport</a></span>
+        <span class="name">ExecutionSupport</span><span class="result"> extends <a href="HadoopSupport.html" class="extype" name="au.com.cba.omnia.thermometer.tools.HadoopSupport">HadoopSupport</a></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Adds testing support for scalding execution monad by setting up a test <code>Config</code> and <code>Mode</code>.</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport">ExecutionSupport</a> with <span class="extype" name="org.specs2.Specification">Specification</span></dd><dt>Source</dt><dd><a href="https://github.com/CommBank/thermometer/tree/2a293e75b4d0980b057338efa4ec747da61cdd9c//core/src/main/scala/au/com/cba/omnia/thermometer/tools/ExecutionSupport.scala" target="_blank">ExecutionSupport.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Adds testing support for scalding execution monad by setting up a test <code>Config</code> and <code>Mode</code>.</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport">ExecutionSupport</a> with <span class="extype" name="org.specs2.Specification">Specification</span></dd><dt>Source</dt><dd><a href="https://github.com/CommBank/thermometer/tree/06d728992c233fcbf71d4b676eab19c2d6462de0//core/src/main/scala/au/com/cba/omnia/thermometer/tools/ExecutionSupport.scala" target="_blank">ExecutionSupport.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="HadoopSupport.html" class="extype" name="au.com.cba.omnia.thermometer.tools.HadoopSupport">HadoopSupport</a>, <span class="extype" name="com.twitter.scalding.FieldConversions">FieldConversions</span>, <span class="extype" name="com.twitter.scalding.LowPriorityFieldConversions">LowPriorityFieldConversions</span>, <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="HadoopSupport.html" class="extype" name="au.com.cba.omnia.thermometer.tools.HadoopSupport">HadoopSupport</a>, <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div><div class="toggleContainer block">
             <span class="toggle">Known Subclasses</span>
             <div class="subClasses hiddenContent"><a href="../hive/ThermometerHiveSpec.html" class="extype" name="au.com.cba.omnia.thermometer.hive.ThermometerHiveSpec">ThermometerHiveSpec</a>, <a href="../core/ThermometerSpec.html" class="extype" name="au.com.cba.omnia.thermometer.core.ThermometerSpec">ThermometerSpec</a></div>
@@ -72,7 +72,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport"><span>ExecutionSupport</span></li><li class="in" name="au.com.cba.omnia.thermometer.tools.HadoopSupport"><span>HadoopSupport</span></li><li class="in" name="com.twitter.scalding.FieldConversions"><span>FieldConversions</span></li><li class="in" name="com.twitter.scalding.LowPriorityFieldConversions"><span>LowPriorityFieldConversions</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport"><span>ExecutionSupport</span></li><li class="in" name="au.com.cba.omnia.thermometer.tools.HadoopSupport"><span>HadoopSupport</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -149,23 +149,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="com.twitter.scalding.LowPriorityFieldConversions#anyToFieldArg" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="anyToFieldArg(f:Any):Comparable[_]"></a>
-      <a id="anyToFieldArg(Any):Comparable[_]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">anyToFieldArg</span><span class="params">(<span name="f">f: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <span class="extype" name="java.lang.Comparable">Comparable</span>[_]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@anyToFieldArg(f:Any):Comparable[_]" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>LowPriorityFieldConversions</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -183,40 +166,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="com.twitter.scalding.FieldConversions#asList" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="asList(f:cascading.tuple.Fields):List[Comparable[_]]"></a>
-      <a id="asList(Fields):List[Comparable[_]]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">asList</span><span class="params">(<span name="f">f: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="java.lang.Comparable">Comparable</span>[_]]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@asList(f:cascading.tuple.Fields):List[Comparable[_]]" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
-    </li><li name="com.twitter.scalding.FieldConversions#asSet" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="asSet(f:cascading.tuple.Fields):Set[Comparable[_]]"></a>
-      <a id="asSet(Fields):Set[Comparable[_]]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">asSet</span><span class="params">(<span name="f">f: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="java.lang.Comparable">Comparable</span>[_]]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@asSet(f:cascading.tuple.Fields):Set[Comparable[_]]" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -240,23 +189,6 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="com.twitter.scalding.FieldConversions#defaultMode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="defaultMode(fromFields:cascading.tuple.Fields,toFields:cascading.tuple.Fields):cascading.tuple.Fields"></a>
-      <a id="defaultMode(Fields,Fields):Fields"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">defaultMode</span><span class="params">(<span name="fromFields">fromFields: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>, <span name="toFields">toFields: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@defaultMode(fromFields:cascading.tuple.Fields,toFields:cascading.tuple.Fields):cascading.tuple.Fields" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="au.com.cba.omnia.thermometer.tools.HadoopSupport#dir" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="dir:String"></a>
       <a id="dir:String"></a>
@@ -274,40 +206,6 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="HadoopSupport.html" class="extype" name="au.com.cba.omnia.thermometer.tools.HadoopSupport">HadoopSupport</a></dd></dl></div>
-    </li><li name="com.twitter.scalding.FieldConversions#ensureUniqueFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="ensureUniqueFields(left:cascading.tuple.Fields,right:cascading.tuple.Fields,rightPipe:cascading.pipe.Pipe):(cascading.tuple.Fields,cascading.pipe.Pipe)"></a>
-      <a id="ensureUniqueFields(Fields,Fields,Pipe):(Fields,Pipe)"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">ensureUniqueFields</span><span class="params">(<span name="left">left: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>, <span name="right">right: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>, <span name="rightPipe">rightPipe: <span class="extype" name="cascading.pipe.Pipe">Pipe</span></span>)</span><span class="result">: (<span class="extype" name="cascading.tuple.Fields">Fields</span>, <span class="extype" name="cascading.pipe.Pipe">Pipe</span>)</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@ensureUniqueFields(left:cascading.tuple.Fields,right:cascading.tuple.Fields,rightPipe:cascading.pipe.Pipe):(cascading.tuple.Fields,cascading.pipe.Pipe)" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
-    </li><li name="com.twitter.scalding.FieldConversions#enumValueToFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="enumValueToFields(x:Enumeration#Value):cascading.tuple.Fields"></a>
-      <a id="enumValueToFields(Value):Fields"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">enumValueToFields</span><span class="params">(<span name="x">x: <span class="extype" name="scala.Enumeration.Value">Value</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@enumValueToFields(x:Enumeration#Value):cascading.tuple.Fields" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -450,74 +348,6 @@ parameters of the <code>Execution</code>, such as the mode and arguments. A usef
       </a>
     </span>
       <p class="shortcomment cmt">Verifies the provided list of Facts in the context of this test.</p>
-    </li><li name="com.twitter.scalding.FieldConversions#fieldFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="fieldFields[T&lt;:TraversableOnce[com.twitter.scalding.Field[_]]](f:T):com.twitter.scalding.RichFields"></a>
-      <a id="fieldFields[T&lt;:TraversableOnce[Field[_]]](T):RichFields"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">fieldFields</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="scala.TraversableOnce">TraversableOnce</span>[<span class="extype" name="com.twitter.scalding.Field">Field</span>[_]]</span>]</span><span class="params">(<span name="f">f: <span class="extype" name="com.twitter.scalding.FieldConversions.fieldFields.T">T</span></span>)</span><span class="result">: <span class="extype" name="com.twitter.scalding.RichFields">RichFields</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@fieldFields[T&lt;:TraversableOnce[com.twitter.scalding.Field[_]]](f:T):com.twitter.scalding.RichFields" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
-    </li><li name="com.twitter.scalding.FieldConversions#fieldToFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="fieldToFields(f:com.twitter.scalding.Field[_]):com.twitter.scalding.RichFields"></a>
-      <a id="fieldToFields(Field[_]):RichFields"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">fieldToFields</span><span class="params">(<span name="f">f: <span class="extype" name="com.twitter.scalding.Field">Field</span>[_]</span>)</span><span class="result">: <span class="extype" name="com.twitter.scalding.RichFields">RichFields</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@fieldToFields(f:com.twitter.scalding.Field[_]):com.twitter.scalding.RichFields" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
-    </li><li name="com.twitter.scalding.FieldConversions#fields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="fields[T&lt;:TraversableOnce[Symbol]](f:T):cascading.tuple.Fields"></a>
-      <a id="fields[T&lt;:TraversableOnce[Symbol]](T):Fields"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">fields</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="scala.TraversableOnce">TraversableOnce</span>[<span class="extype" name="scala.Symbol">Symbol</span>]</span>]</span><span class="params">(<span name="f">f: <span class="extype" name="com.twitter.scalding.FieldConversions.fields.T">T</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@fields[T&lt;:TraversableOnce[Symbol]](f:T):cascading.tuple.Fields" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
-    </li><li name="com.twitter.scalding.FieldConversions#fieldsToRichFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="fieldsToRichFields(fields:cascading.tuple.Fields):com.twitter.scalding.RichFields"></a>
-      <a id="fieldsToRichFields(Fields):RichFields"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">fieldsToRichFields</span><span class="params">(<span name="fields">fields: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="result">: <span class="extype" name="com.twitter.scalding.RichFields">RichFields</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@fieldsToRichFields(fields:cascading.tuple.Fields):com.twitter.scalding.RichFields" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -541,23 +371,6 @@ parameters of the <code>Execution</code>, such as the mode and arguments. A usef
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="com.twitter.scalding.FieldConversions#fromEnum" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="fromEnum[T&lt;:Enumeration](enumeration:T):cascading.tuple.Fields"></a>
-      <a id="fromEnum[T&lt;:Enumeration](T):Fields"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">fromEnum</span><span class="tparams">[<span name="T">T &lt;: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Enumeration" class="extype" target="_top">Enumeration</a></span>]</span><span class="params">(<span name="enumeration">enumeration: <span class="extype" name="com.twitter.scalding.FieldConversions.fromEnum.T">T</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@fromEnum[T&lt;:Enumeration](enumeration:T):cascading.tuple.Fields" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -575,40 +388,6 @@ parameters of the <code>Execution</code>, such as the mode and arguments. A usef
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="com.twitter.scalding.FieldConversions#getField" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getField(f:cascading.tuple.Fields,idx:Int):cascading.tuple.Fields"></a>
-      <a id="getField(Fields,Int):Fields"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getField</span><span class="params">(<span name="f">f: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>, <span name="idx">idx: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@getField(f:cascading.tuple.Fields,idx:Int):cascading.tuple.Fields" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
-    </li><li name="com.twitter.scalding.FieldConversions#hasInts" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="hasInts(f:cascading.tuple.Fields):Boolean"></a>
-      <a id="hasInts(Fields):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">hasInts</span><span class="params">(<span name="f">f: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@hasInts(f:cascading.tuple.Fields):Boolean" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -626,57 +405,6 @@ parameters of the <code>Execution</code>, such as the mode and arguments. A usef
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="com.twitter.scalding.FieldConversions#intFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="intFields[T&lt;:TraversableOnce[Int]](f:T):cascading.tuple.Fields"></a>
-      <a id="intFields[T&lt;:TraversableOnce[Int]](T):Fields"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">intFields</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="scala.TraversableOnce">TraversableOnce</span>[<a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Int" class="extype" target="_top">Int</a>]</span>]</span><span class="params">(<span name="f">f: <span class="extype" name="com.twitter.scalding.FieldConversions.intFields.T">T</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@intFields[T&lt;:TraversableOnce[Int]](f:T):cascading.tuple.Fields" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
-    </li><li name="com.twitter.scalding.FieldConversions#intToFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="intToFields(x:Int):cascading.tuple.Fields"></a>
-      <a id="intToFields(Int):Fields"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">intToFields</span><span class="params">(<span name="x">x: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@intToFields(x:Int):cascading.tuple.Fields" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
-    </li><li name="com.twitter.scalding.FieldConversions#integerToFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="integerToFields(x:Integer):cascading.tuple.Fields"></a>
-      <a id="integerToFields(Integer):Fields"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">integerToFields</span><span class="params">(<span name="x">x: <span class="extype" name="java.lang.Integer">Integer</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@integerToFields(x:Integer):cascading.tuple.Fields" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -745,26 +473,6 @@ parameters of the <code>Execution</code>, such as the mode and arguments. A usef
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="com.twitter.scalding.FieldConversions#newSymbol" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="newSymbol(avoid:Set[Symbol],guess:Symbol,trial:Int):Symbol"></a>
-      <a id="newSymbol(Set[Symbol],Symbol,Int):Symbol"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">newSymbol</span><span class="params">(<span name="avoid">avoid: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Symbol">Symbol</span>]</span>, <span name="guess">guess: <span class="extype" name="scala.Symbol">Symbol</span></span>, <span name="trial">trial: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <span class="extype" name="scala.Symbol">Symbol</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@newSymbol(avoid:Set[Symbol],guess:Symbol,trial:Int):Symbol" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd><dt>Annotations</dt><dd>
-                <span class="name">@tailrec</span><span class="args">()</span>
-              
-        </dd></dl></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>
@@ -799,40 +507,6 @@ parameters of the <code>Execution</code>, such as the mode and arguments. A usef
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="com.twitter.scalding.FieldConversions#parseAnySeqToFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="parseAnySeqToFields[T&lt;:TraversableOnce[Any]](anyf:T):cascading.tuple.Fields"></a>
-      <a id="parseAnySeqToFields[T&lt;:TraversableOnce[Any]](T):Fields"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">parseAnySeqToFields</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="scala.TraversableOnce">TraversableOnce</span>[<a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>]</span><span class="params">(<span name="anyf">anyf: <span class="extype" name="com.twitter.scalding.FieldConversions.parseAnySeqToFields.T">T</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@parseAnySeqToFields[T&lt;:TraversableOnce[Any]](anyf:T):cascading.tuple.Fields" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
-    </li><li name="com.twitter.scalding.LowPriorityFieldConversions#productToFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="productToFields(f:Product):cascading.tuple.Fields"></a>
-      <a id="productToFields(Product):Fields"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">productToFields</span><span class="params">(<span name="f">f: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Product" class="extype" target="_top">Product</a></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@productToFields(f:Product):cascading.tuple.Fields" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>LowPriorityFieldConversions</dd></dl></div>
     </li><li name="au.com.cba.omnia.thermometer.tools.ExecutionSupport#run" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="run[K,V](grouped:com.twitter.scalding.Grouped[K,V]):scala.util.Try[Iterable[(K,V)]]"></a>
       <a id="run[K,V](Grouped[K,V]):Try[Iterable[(K,V)]]"></a>
@@ -901,57 +575,6 @@ parameters of the <code>Execution</code>, such as the mode and arguments. A usef
       </a>
     </span>
       <p class="shortcomment cmt">Checks that the provided pipe runs successfully and returns an iterable of the content.</p>
-    </li><li name="com.twitter.scalding.FieldConversions#strFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="strFields[T&lt;:TraversableOnce[String]](f:T):cascading.tuple.Fields"></a>
-      <a id="strFields[T&lt;:TraversableOnce[String]](T):Fields"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">strFields</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="scala.TraversableOnce">TraversableOnce</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>]</span><span class="params">(<span name="f">f: <span class="extype" name="com.twitter.scalding.FieldConversions.strFields.T">T</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@strFields[T&lt;:TraversableOnce[String]](f:T):cascading.tuple.Fields" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
-    </li><li name="com.twitter.scalding.FieldConversions#stringToFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="stringToFields(x:String):cascading.tuple.Fields"></a>
-      <a id="stringToFields(String):Fields"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">stringToFields</span><span class="params">(<span name="x">x: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@stringToFields(x:String):cascading.tuple.Fields" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
-    </li><li name="com.twitter.scalding.FieldConversions#symbolToFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="symbolToFields(x:Symbol):cascading.tuple.Fields"></a>
-      <a id="symbolToFields(Symbol):Fields"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">symbolToFields</span><span class="params">(<span name="x">x: <span class="extype" name="scala.Symbol">Symbol</span></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@symbolToFields(x:Symbol):cascading.tuple.Fields" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -986,40 +609,6 @@ parameters of the <code>Execution</code>, such as the mode and arguments. A usef
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="com.twitter.scalding.FieldConversions#tuple2ToFieldsPair" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="tuple2ToFieldsPair[T,U](pair:(T,U))(implicittf:T=&gt;cascading.tuple.Fields,implicituf:U=&gt;cascading.tuple.Fields):(cascading.tuple.Fields,cascading.tuple.Fields)"></a>
-      <a id="tuple2ToFieldsPair[T,U]((T,U))((T)⇒Fields,(U)⇒Fields):(Fields,Fields)"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">tuple2ToFieldsPair</span><span class="tparams">[<span name="T">T</span>, <span name="U">U</span>]</span><span class="params">(<span name="pair">pair: (<span class="extype" name="com.twitter.scalding.FieldConversions.tuple2ToFieldsPair.T">T</span>, <span class="extype" name="com.twitter.scalding.FieldConversions.tuple2ToFieldsPair.U">U</span>)</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="tf">tf: (<span class="extype" name="com.twitter.scalding.FieldConversions.tuple2ToFieldsPair.T">T</span>) ⇒ <span class="extype" name="cascading.tuple.Fields">Fields</span></span>, <span name="uf">uf: (<span class="extype" name="com.twitter.scalding.FieldConversions.tuple2ToFieldsPair.U">U</span>) ⇒ <span class="extype" name="cascading.tuple.Fields">Fields</span></span>)</span><span class="result">: (<span class="extype" name="cascading.tuple.Fields">Fields</span>, <span class="extype" name="cascading.tuple.Fields">Fields</span>)</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@tuple2ToFieldsPair[T,U](pair:(T,U))(implicittf:T=&gt;cascading.tuple.Fields,implicituf:U=&gt;cascading.tuple.Fields):(cascading.tuple.Fields,cascading.tuple.Fields)" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
-    </li><li name="com.twitter.scalding.FieldConversions#unitToFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="unitToFields(u:Unit):cascading.tuple.Fields"></a>
-      <a id="unitToFields(Unit):Fields"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">unitToFields</span><span class="params">(<span name="u">u: <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>)</span><span class="result">: <span class="extype" name="cascading.tuple.Fields">Fields</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@unitToFields(u:Unit):cascading.tuple.Fields" title="Permalink" target="_top">
-        <img src="../../../../../../lib/permalink.png" />
-      </a>
-    </span>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FieldConversions</dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -1100,10 +689,6 @@ parameters of the <code>Execution</code>, such as the mode and arguments. A usef
         <div id="inheritedMembers">
         <div class="parent" name="au.com.cba.omnia.thermometer.tools.HadoopSupport">
               <h3>Inherited from <a href="HadoopSupport.html" class="extype" name="au.com.cba.omnia.thermometer.tools.HadoopSupport">HadoopSupport</a></h3>
-            </div><div class="parent" name="com.twitter.scalding.FieldConversions">
-              <h3>Inherited from <span class="extype" name="com.twitter.scalding.FieldConversions">FieldConversions</span></h3>
-            </div><div class="parent" name="com.twitter.scalding.LowPriorityFieldConversions">
-              <h3>Inherited from <span class="extype" name="com.twitter.scalding.LowPriorityFieldConversions">LowPriorityFieldConversions</span></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.6/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
