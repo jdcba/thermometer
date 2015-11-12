@@ -174,3 +174,8 @@ ongoing work
   - Support for re-running tests with different scalding modes
  - Add the ability for Context to not depend on hdfs, via some
    sort of in memory representation for assertions.
+
+acknowledgement
+---------------
+We would like to thank the YourKit team for their support in providing us with their excellent [Java Profiler](https://www.yourkit.com/java/profiler/index.jsp). 
+
