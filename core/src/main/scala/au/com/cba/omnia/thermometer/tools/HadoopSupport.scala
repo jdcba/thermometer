@@ -14,6 +14,8 @@
 
 package au.com.cba.omnia.thermometer.tools
 
+import java.nio.file.{Files, Path => JPath}
+
 import scalaz._, Scalaz._
 
 import org.apache.hadoop.conf.Configuration
@@ -22,14 +24,12 @@ import org.apache.hadoop.mapred.JobConf
 
 /** Adds testing support for Hadoop by creating a `JobConf` with a temporary path.*/
 trait HadoopSupport {
-  lazy val name: String =
-    s"test-${java.util.UUID.randomUUID}"
-
-  lazy val dir: String =
-    s"/tmp/hadoop/${name}/mapred"
+  lazy val testDir: JPath  = Files.createTempDirectory("thermometer-test")
+  lazy val dirPath: JPath  = testDir.resolve("mapred")
+  lazy val dir:     String = dirPath.toString
 
   lazy val jobConf: JobConf = new JobConf <| (conf => {
-    new java.io.File(dir, "data").mkdirs()
+    Files.createDirectory(dirPath.resolve("data"))
     conf.set("user.dir", s"${dir}/user")
     conf.set("jobclient.completion.poll.interval", "10")
     conf.set("cascading.flow.job.pollinginterval", "2")

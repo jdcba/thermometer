@@ -29,7 +29,7 @@ import au.com.cba.omnia.thermometer.tools.HadoopSupport
 
 /** Adds testing support for Hive by creating a `HiveConf` with a temporary path.*/
 trait HiveSupport extends HadoopSupport with BeforeEach {
-  lazy val hiveDir: String       = s"/tmp/hadoop/${name}/hive"
+  lazy val hiveDir: String       = testDir.resolve("hive").toString
   lazy val hiveDb: String        = s"$hiveDir/hive_db"
   lazy val hiveWarehouse: String = s"$hiveDir/warehouse"
   lazy val derbyHome: String     = s"$hiveDir/derby"
