@@ -165,6 +165,26 @@ The verbosity of the logging messages from Thermometer and Hadoop can be configu
 `log4j.properties` file. Please find an example in
 [core/src/main/resources/log4j.properties](core/src/main/resources/log4j.properties).
 
+java.net.UnknownHostException
+-----------------------------
+
+Under OS X, you may see an error similar to the following:
+
+```
+Execution failed:
+  java.net.UnknownHostException: MyHostName:
+    MyHostName: nodename nor servname provided, or not known
+```
+
+where `MyHostName` is the name of your machine.
+
+To avoid this problem, you can add `MyHostName` as an alias for
+`localhost` in `/etc/hosts`:
+
+```
+127.0.0.1 localhost MyHostName
+```
+
 ongoing work
 ------------
 
