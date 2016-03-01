@@ -1,4 +1,4 @@
 name: thermometer
 exclude: [Gemfile]
 markdown: kramdown
-releaseVersion:  "1.4.1-20160210031841-cd10d5d"
+releaseVersion:  "1.4.1-20160301032700-e0f381f"
