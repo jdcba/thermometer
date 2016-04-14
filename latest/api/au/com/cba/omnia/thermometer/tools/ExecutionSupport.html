@@ -49,7 +49,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Adds testing support for scalding execution monad by setting up a test <code>Config</code> and <code>Mode</code>.</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport">ExecutionSupport</a> with <span class="extype" name="org.specs2.Specification">Specification</span></dd><dt>Source</dt><dd><a href="https://github.com/CommBank/thermometer/tree/e0f381f19ab0e8a06d6fbdef438021ed19d8c9f5//core/src/main/scala/au/com/cba/omnia/thermometer/tools/ExecutionSupport.scala" target="_blank">ExecutionSupport.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Adds testing support for scalding execution monad by setting up a test <code>Config</code> and <code>Mode</code>.</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport">ExecutionSupport</a> with <span class="extype" name="org.specs2.Specification">Specification</span></dd><dt>Source</dt><dd><a href="https://github.com/CommBank/thermometer/tree/99c196d0b1f3c4cfbe6835c07ff1e05314136650//core/src/main/scala/au/com/cba/omnia/thermometer/tools/ExecutionSupport.scala" target="_blank">ExecutionSupport.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a href="HadoopSupport.html" class="extype" name="au.com.cba.omnia.thermometer.tools.HadoopSupport">HadoopSupport</a>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.7/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div><div class="toggleContainer block">
@@ -605,6 +605,26 @@ parameters of the <code>Execution</code>, such as the mode and arguments. A usef
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="HadoopSupport.html" class="extype" name="au.com.cba.omnia.thermometer.tools.HadoopSupport">HadoopSupport</a></dd></dl></div>
+    </li><li name="au.com.cba.omnia.thermometer.tools.ExecutionSupport#throwRendered" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="throwRendered[T](t:Throwable):T"></a>
+      <a id="throwRendered[T](Throwable):T"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">throwRendered</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="t">t: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="au.com.cba.omnia.thermometer.tools.ExecutionSupport.throwRendered.T">T</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#au.com.cba.omnia.thermometer.tools.ExecutionSupport@throwRendered[T](t:Throwable):T" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Throw a <code>FailureException</code> that wraps a <code>SpecsFailure</code> containing the details of the
+provided <code>throwable</code> in the failure message.</p><div class="fullcomment"><div class="comment cmt"><p>Throw a <code>FailureException</code> that wraps a <code>SpecsFailure</code> containing the details of the
+provided <code>throwable</code> in the failure message.
+</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>type of the expression that the calling code expects</p></dd><dt class="param">t</dt><dd class="cmt"><p>the exception details to render in the <code>FailureException</code></p></dd><dt>returns</dt><dd class="cmt"><p>this method never returns normally, it always throws a <code>FailureException</code></p></dd></dl></div>
     </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>
