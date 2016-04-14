@@ -35,18 +35,18 @@ import au.com.cba.omnia.thermometer.fact.Fact
 trait ExecutionSupport extends HadoopSupport { self: Specification =>
   /**
    * Executes the provided execution.
-   * 
+   *
    * The provided `Execution` is run in HDFS mode, using supplied arguments and optional additional
    * configuration. The method returns a `Try[T]` containing the result after waiting for the
    * execution to finish.
-   * 
+   *
    * `extraConfig` should be used with caution since it can potentially override important
    * parameters of the `Execution`, such as the mode and arguments. A useful purpose for
    * `extraConfig` is to add custom serialization for the execution.
-   * 
+   *
    * @tparam T type of the execution (the type of its result)
    * @param execution execution to execute
-   * @param args arguments passed to `Execution.run` (placed in the Scalding `Args` 
+   * @param args arguments passed to `Execution.run` (placed in the Scalding `Args`
    *        variable of the `Config`)
    * @param extraConfig extra configuration passed to `Execution.run` (appended to the
    *        `Config` that would otherwise be used using the `++` method)
@@ -77,19 +77,19 @@ trait ExecutionSupport extends HadoopSupport { self: Specification =>
 
   /**
    * Checks that the provided execution executed successfully.
-   * 
+   *
    * The value produced by the execution is ignored.
-   * 
+   *
    * The provided `Execution` is run in HDFS mode, using supplied arguments and optional additional
    * configuration. Any return value from the execution is discarded.
-   * 
+   *
    * `extraConfig` should be used with caution since it can potentially override important
    * parameters of the `Execution`, such as the mode and arguments. A useful purpose for
    * `extraConfig` is to add custom serialization for the execution.
-   * 
+   *
    * @tparam T type of the execution (the type of its result)
    * @param execution execution to execute
-   * @param args arguments passed to `Execution.run` (placed in the Scalding `Args` 
+   * @param args arguments passed to `Execution.run` (placed in the Scalding `Args`
    *        variable of the `Config`)
    * @param extraConfig extra configuration passed to `Execution.run` (appended to the
    *        `Config` that would otherwise be used using the `++` method)
@@ -101,30 +101,25 @@ trait ExecutionSupport extends HadoopSupport { self: Specification =>
     extraConfig: Config = Config.empty
   ): Result = {
     execute(execution, args, extraConfig) match {
-      case Success(x) => SpecsSuccess()
-      case Failure(t) => {
-        val stackTrace = Errors.renderWithStack(t)
-        throw FailureException(SpecsFailure(
-          s"Execution failed: ${t.toString}\n$stackTrace", t.getMessage, t.getStackTrace.toList
-        ))
-      }
+      case Success(_) => SpecsSuccess()
+      case Failure(t) => throwRendered(t)
     }
   }
 
   /**
    * Checks that the provided execution executed successfully and returns the value produced.
-   * 
+   *
    * The provided `Execution` is run in HDFS mode, using supplied arguments and optional additional
    * configuration. The method returns the value of the execution if it was successful, and throws a
    * `FailureException` if it faield.
-   * 
+   *
    * `extraConfig` should be used with caution since it can potentially override important
    * parameters of the `Execution`, such as the mode and arguments. A useful purpose for
    * `extraConfig` is to add custom serialization for the execution.
-   * 
+   *
    * @tparam T type of the execution (the type of its result value)
    * @param execution execution to execute
-   * @param args arguments passed to `Execution.run` (placed in the Scalding `Args` 
+   * @param args arguments passed to `Execution.run` (placed in the Scalding `Args`
    *        variable of the `Config`)
    * @param extraConfig extra configuration passed to `Execution.run` (appended to the
    *        `Config` that would otherwise be used using the `++` method)
@@ -137,9 +132,23 @@ trait ExecutionSupport extends HadoopSupport { self: Specification =>
   ): T = {
     execute(execution, args, extraConfig) match {
       case Success(x) => x
-      case Failure(t) =>
-        throw FailureException(SpecsFailure(s"Execution failed: ${t.toString}", "", t.getStackTrace.toList))
+      case Failure(t) => throwRendered(t)
     }
+  }
+
+  /**
+    * Throw a `FailureException` that wraps a `SpecsFailure` containing the details of the
+    * provided `throwable` in the failure message.
+    *
+    * @tparam T type of the expression that the calling code expects
+    * @param t the exception details to render in the `FailureException`
+    * @return this method never returns normally, it always throws a `FailureException`
+    */
+  def throwRendered[T](t: Throwable): T = {
+    val stackTrace = Errors.renderWithStack(t)
+    throw FailureException(SpecsFailure(
+      s"Execution failed: ${t.toString}\n$stackTrace", t.getMessage, t.getStackTrace.toList
+    ))
   }
 
   /** Runs the provided pipe and returns [[Try]] with the iterable of the result. */
