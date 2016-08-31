@@ -14,6 +14,7 @@
 
 package au.com.cba.omnia.thermometer.example
 
+import java.io.File
 import java.util.Date
 
 import scalaz.effect.IO
@@ -31,9 +32,10 @@ class ExecutionSpec extends ThermometerSpec { def is = s2"""
 Demonstration of ThermometerSpec using Execution monad
 ======================================================
 
-  Verify output using explicit expectations $usingExpectations
-  Verify output using fact api              $usingFacts
-  Verify output against environment         $environment
+  Verify output using explicit expectations           $usingExpectations
+  Verify output using fact api                        $usingFacts
+  Verify output against environment                   $environment
+  Verify output against environment with hidden files $ignoreHidden
 
 """
   val purchaseDate = new Date().toString
@@ -87,6 +89,20 @@ Demonstration of ThermometerSpec using Execution monad
 
     facts(
       path("output") ==> recordsByDirectory(psvReader, psvReader, path("expected"), (r: Car) => {
+        r match { case Car(model, year, _) => model + year + "DUMMY"}
+      })
+    )
+  }
+
+  def ignoreHidden = withEnvironment(path(getClass.getResource("env3").toString)) {
+    executesOk(execution2)
+
+    val hiddenFile = new File(s"$dir/user/output/cars/hidden/_hidden")
+    hiddenFile.getParentFile.mkdirs
+    hiddenFile.createNewFile
+
+    facts(
+      path("output") ==> recordsByDirectory(psvReader, psvReader, path("expected3"), (r: Car) => {
         r match { case Car(model, year, _) => model + year + "DUMMY"}
       })
     )

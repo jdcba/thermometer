@@ -173,6 +173,8 @@ object PathFactoids extends MustThrownExpectations {
 
         RemoteIter(system.listFiles(p, true))
           .filterNot(_.isDirectory)
+          /* Filtering out hidden files so that directories containing only hidden files aren't included */
+          .filter(_.getPath.getName.matches(fileGlob))
           .map(_.getPath.getParent().toString)
           .map(s => s match {
             case pattern(subdir) => subdir
