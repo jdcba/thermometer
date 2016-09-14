@@ -7,18 +7,21 @@ cache:
   - $HOME/.ivy2
   - $HOME/.m2
 install:
-- git clone https://github.com/CommBank/ci.git
+- curl https://commbank.artifactoryonline.com/commbank/binaries/ci/ci-3.3.0-20160817231550-75d3c9c.tar.gz | tar xz
 - chmod ugo+x ci/*
-- ci/sbt-setup.sh
-- ci/sbt-setup-version.sh
+- ci/sbt-ci-setup.sh
+- ci/sbt-ci-setup-version.sh
 script:
-- sbt -Dsbt.global.base=$TRAVIS_BUILD_DIR/ci '; test; package' && ci/sbt-deploy.sh
-  && ci/sbt-gh-pages-ssh.sh
+- sbt -Dsbt.global.base=$TRAVIS_BUILD_DIR/ci '; test; package' && ci/sbt-ci-deploy.sh
+  maven http://commbank.artifactoryonline.com/commbank ext-releases-local && ci/sbt-ci-build-doc.sh
+  https://commbank.github.io/ https://github.com/CommBank/thermometer/ && ci/ci-push-branch.sh
+  gh-pages
 after_script:
 - rm -rf ci
 env:
   global:
-    secure: mlWljSnK5QPF2zyWaidZE60O0DQG8pYbmVULnraL29pgtZ1BKupBuFIpaMcTO82vRKg54YoQtYWdK1DcWkOug40eK52xozNRou5l/eL+UzDJCE8lbh5oXi5x9cdUV+Y/QxqoQfLNST+lrxBzzLmbhvihH647kDX6jsUdoGBhvpI=
+  - secure: tWL8CdYcRh3UUvDmiWZi+WrZBKUk9QajGZNgt4bu+NOvE8kHiibMioDZGfAtPQZaG+A0CXhOMLgcGsbmJFey4l5C1G4lajzh8Tz1ErkYpGAVvK9Ag6MFFrj1fR9cIHZlK6/dNdaQ0flsfFCbe8sMbj+XfLPPpZ0sVSXn7zzOwnM=
+  - secure: KkUu2n1WA7Mmi/PO660SejCv7UwEMNJdkzCKvmADUgXkLKQQtOJr96QPwUMiTA/9LvsshQvZhamud/iwJLsfESRP+alEy+UqHpitQuMXkuy6O/ToAzPB/XgD4mpxeuiEWu8WL+ar1wPI+bNXnRcFcy1uhp7Y+NpH+5V5zzfVfJg=
 before_install:
 - openssl aes-256-cbc -K $encrypted_0f1f0cf625a6_key -iv $encrypted_0f1f0cf625a6_iv
-  -in .travis/deploy-key.enc -out .travis/deploy-key.pem -d
+  -in .ci/deploy-key.enc -out .ci/deploy-key.pem -d
