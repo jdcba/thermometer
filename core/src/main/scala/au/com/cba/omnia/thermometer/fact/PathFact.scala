@@ -173,14 +173,15 @@ object PathFactoids extends MustThrownExpectations {
 
         RemoteIter(system.listFiles(p, true))
           .filterNot(_.isDirectory)
-          /* Filtering out hidden files so that directories containing only hidden files aren't included */
-          .filter(_.getPath.getName.matches(fileGlob))
           .map(_.getPath.getParent().toString)
           .map(s => s match {
             case pattern(subdir) => subdir
           })
           .filter(_ != "")
-          .map(path(_)).toSet
+          .map(path(_))
+          /* Filtering out directories containing only hidden files */
+          .filterNot(subdir => context.glob(p </> subdir </> fileGlob).isEmpty)
+          .toSet
       }
       val actualSubdirs = getRelativeSubdirs(actualPath)
       val expectedSubdirs = getRelativeSubdirs(expectedPath)
