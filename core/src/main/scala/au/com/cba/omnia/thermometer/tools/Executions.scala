@@ -27,6 +27,9 @@ object Executions {
   /** Run the specified execution context, returns an optional error state (None indicates success). */
   def runExecution[T](config: Config, mode: Mode, execution: Execution[T]): Try[T] = {
     val es     = Executors.newCachedThreadPool()
+    // Occasionally (usually when the system is under load), RejectedExecutionException has been reported
+    // when an execution request is submitted to the ThreadPoolExecutor after shutdown has begun.
+    // Often the test succeeds despite this
     es.asInstanceOf[ThreadPoolExecutor].setRejectedExecutionHandler(Handler)
     val cec    = ExecutionContext.fromExecutorService(es)
     val result = Try(Await.result(execution.run(config, mode)(cec), Inf))
