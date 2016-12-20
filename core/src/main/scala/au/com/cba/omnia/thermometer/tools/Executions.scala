@@ -19,7 +19,7 @@ import scala.concurrent.{Await, ExecutionContext}
 import scala.concurrent.duration.Duration.Inf
 import scala.util.Try
 
-import java.util.concurrent.Executors
+import java.util.concurrent.{Executors, RejectedExecutionHandler, ThreadPoolExecutor}
 
 import com.twitter.scalding.{Config, Execution, Mode}
 
@@ -27,9 +27,18 @@ object Executions {
   /** Run the specified execution context, returns an optional error state (None indicates success). */
   def runExecution[T](config: Config, mode: Mode, execution: Execution[T]): Try[T] = {
     val es     = Executors.newCachedThreadPool()
+    es.asInstanceOf[ThreadPoolExecutor].setRejectedExecutionHandler(Handler)
     val cec    = ExecutionContext.fromExecutorService(es)
     val result = Try(Await.result(execution.run(config, mode)(cec), Inf))
     es.shutdown()
     result
+  }
+
+  object Handler extends RejectedExecutionHandler {
+    def rejectedExecution(r: Runnable, es: ThreadPoolExecutor) {
+      println(s"Execution request rejected by ${es} (isShutdown=${es.isShutdown}, isTerminating=${es.isTerminating}, isTerminated=${es.isTerminated}")
+      println(s"Running ${r} in caller thread instead...")
+      r.run
+    }
   }
 }
