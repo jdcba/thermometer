@@ -1,0 +1,4 @@
+name: thermometer
+exclude: [Gemfile]
+markdown: kramdown
+releaseVersion: 1.4.9-20161223033419-c0ea273
